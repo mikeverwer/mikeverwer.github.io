@@ -1,1 +1,36 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Marked in the browser</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js";>
+    document.body.style.display = "none"; // Hide the page until it's finished rendering.
+
+    document.createElement("markdown");
+    var md_tags = document.getElementsByTagName("markdown"); // Returns array of all markdown tags.
+
+    for (var i = 0; i < md_tags.length; i++) { // Iterate through all the tags, and generate the HTML.
+        var md_text = md_tags[i].textContent.replace(/^[^\S\n]+/mg, ""); // Remove leading whitespaces.
+
+        var md_div = document.createElement("div"); // Make a new div to replace the fake tag.
+        md_div.id = "content";
+        md_div.innerHTML = marked.parse(md_text);
+
+        md_tags[i].parentNode.appendChild(md_div); // Add remove the old raw markdown.
+        md_tags[i].parentNode.removeChild(md_tags[i]);
+    }
+
+    document.body.style.display = ""; // Show the rendered page.
+  </script>
+</head>
+<body>
+  <markdown>
+    # Example Markdown Content
+
+    This is **bold** text.
+
+    - It supports *italics*.
+    - It supports [links](https://example.com).
+  </markdown>
+</body>
+</html>

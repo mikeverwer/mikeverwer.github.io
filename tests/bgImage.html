@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Marked in the browser</title>
+  <style>
+    /* Center the content */
+    zero-md {
+      margin: 64px auto;
+      width: 60%; /* Adjust the width as needed */
+      text-align: justify;
+    }
+
+    /* Styles for the clickable object */
+    .clickable-object {
+      position: fixed;
+      top: 40px; /* Adjust as needed */
+      left: 50px; /* Adjust as needed */
+      width: 64px;
+      height: 64px;
+      cursor: pointer;
+    }
+
+    /* Add padding to the top of the body */
+    body {
+      padding-top: 100px; /* Adjust as needed */
+    }
+  </style>
+  <script
+    type="module"
+   src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+  ></script>
+</head>
+<body>
+  <div id="content"></div>
+  <!-- Image used as the clickable object -->
+  <img class="clickable-object" src="icon.png" alt="Clickable Image" onclick="alert('You clicked the object!')">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+  <!-- Load the element definition -->
+  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+
+  <!-- Simply set the `src` attribute to your MD file and win -->
+  <zero-md src="https://raw.githubusercontent.com/mikeverwer/novelties/main/README.md"></zero-md>
+</body>
+</html>
