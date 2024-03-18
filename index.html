@@ -14,6 +14,7 @@
             font-family: Arial, Helvetica, sans-serif, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #dcdcdc;
         }
         header {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -23,6 +24,15 @@
             align-items: center;
             padding-left: 52px;
             padding-right: 52px;
+            text-decoration: none;
+        }
+        header a{
+            text-decoration: black;
+            color: #000;
+        }
+        header a:hover{
+            cursor: none;
+            color: white;
         }
         nav.left {
             width: 200px;
@@ -40,9 +50,6 @@
             padding: 10px;
             border-bottom: none;
         }
-        nav ul li:last-child {
-            border-bottom: none;
-        }
         nav ul li a {
             font-size: 32px;
             text-decoration: none; /* Remove underline */
@@ -51,8 +58,8 @@
             display: block; /* Make link text block-level */
         }
         nav ul li a:hover {
-            color: #dcdcdc; /* Change background color on hover */
-            cursor: cell;
+            color: white; /* Change background color on hover */
+            cursor: none;
         }
         main {
             margin: 20px auto;
@@ -64,13 +71,24 @@
             max-width: 100px; /* Adjust as needed */
             height: auto;
             margin-left: 16px;
-            background-color: none;
             border: 3px solid transparent;
+            background-color: none;
         }
         img:hover{
-            cursor: cell;
-            border: 3px solid #dcdcdc;
-            background-color: #dcdcdc;
+            cursor: none;
+            border: 3px solid white;
+            background-color: white;
+        }
+        .bottom-right-image {
+            position: fixed;
+            max-width: 16px;
+            bottom: 10px;
+            right: 10px;
+            border: none;
+        }
+        .bottom-right-image:hover{
+            cursor: none;
+            border: none;
         }
     </style>
     
@@ -84,17 +102,19 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.html"> <!-- Replace "index.html" with the URL of your homepage -->
-                <img src="icon.png" alt="Website Logo">
+            <a href="/index.html"> <!-- Replace "index.html" with the URL of your homepage -->
+                <img src="/icon.png" alt="Website Logo">
             </a>
-            <h1> Mike Verwer </h1>  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
+            <a href="/docs/about.html"> <!-- Link for the text -->
+                <h1> Mike Verwer </h1>
+            </a>  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
         </header>
         <nav class="left">
             <ul>
-                <li><a href="teaching/teaching_home.html">Teaching</a></li>
-                <li><a href="programs/novelties.html">Programs</a></li>
-                <li><a href="https://github.com/mikeverwer/" target="_blank">GitHub</a></li>
-                <li><a href="youtube/youtube_home">Youtube</a></li>
+                <li><a href="/teaching/teaching_home.html">Teaching</a></li>
+                <li><a href="/programs/programs_home.html">Programs</a></li>
+                <li><a href="/https://github.com/mikeverwer/" target="_blank">GitHub</a></li>
+                <li><a href="/youtube/youtube_home">Youtube</a></li>
             </ul>
         </nav>
         <nav class="right">  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
@@ -111,9 +131,9 @@
             <!-- Simply set the `src` attribute to your MD file and win -->
             <zero-md src="greeting.md"></zero-md>  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
         </main>
-    </div>
-    <div class="container">
-        <small>
+        <a href="/page.html"> 
+            <img class="bottom-right-image" src="/golden rectangle.png" alt="Golden rectangle">
+        </a>
     </div>
 </body>
 </html>
