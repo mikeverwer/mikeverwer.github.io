@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home || Mike Verwer</title>  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
+    <title>2 nav bars || Mike Verwer</title>  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
     <style>
         .container {
             margin: 0 auto;
@@ -52,7 +52,6 @@
         }
         nav ul li a:hover {
             color: #dcdcdc; /* Change background color on hover */
-            cursor: cell;
         }
         main {
             margin: 20px auto;
@@ -60,15 +59,10 @@
             width: 60%;
         }
         img {
-            padding: 4px;
             max-width: 100px; /* Adjust as needed */
             height: auto;
-            margin-left: 16px;
-            border: 3px solid transparent;
-        }
-        img:hover{
-            cursor: cell;
-            border: 3px solid #dcdcdc;
+            margin-right: 20px;
+            cursor: pointer;
         }
     </style>
     
@@ -85,7 +79,7 @@
             <a href="index.html"> <!-- Replace "index.html" with the URL of your homepage -->
                 <img src="icon.png" alt="Website Logo">
             </a>
-            <h1> Mike Verwer </h1>  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
+            <h1>Mike Verwer</h1>  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
         </header>
         <nav class="left">
             <ul>
@@ -97,6 +91,9 @@
         </nav>
         <nav class="right">  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
             <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
             </ul>
         </nav>
         <main>
@@ -107,7 +104,7 @@
             <!-- Load the element definition -->
             <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
             <!-- Simply set the `src` attribute to your MD file and win -->
-            <zero-md src="greeting.md"></zero-md>  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
+            <zero-md src="content.md"></zero-md>  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
         </main>
     </div>
 </body>
