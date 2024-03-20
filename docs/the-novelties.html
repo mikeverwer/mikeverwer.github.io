@@ -9,8 +9,6 @@
     }
     /* Center the content */
     zero-md {
-      margin: 25px auto;
-      width: 60%; /* Adjust the width as needed */
       text-align: justify;
     }
 
@@ -26,11 +24,37 @@
       height: auto;
       background: none;
       border: 8px solid transparent;
+      position: fixed;
     }
     .logo:hover{
       cursor: none; /* Make the logo clickable */
       background-color: white;
       border: 8px solid white;
+    }
+
+    main {
+      margin: 100px auto;
+      padding: 20px;
+      width: 60%;
+      background-color: #f5f5f5;
+    }
+
+    footer {
+      padding: 64px auto;
+      text-align: Right;
+    }
+    .icon {
+          position: fixed;
+          max-width: 16px;
+          bottom: 10px;
+          right: 10px;
+          border: 4px solid transparent;
+          background-color: #dcdcdc;
+    }
+    img:hover{
+        cursor: none;
+        background-color: white;
+        border: 4px solid white;
     }
   </style>
   <script
@@ -46,14 +70,18 @@
       <img src="/icon.png" alt="Glider" class="logo">
     </a>
   </header>
-
-  <div id="the-novelties"></div>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
-  <!-- Load the element definition -->
-  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
-  <!-- Simply set the `src` attribute to your MD file and win -->
-  <zero-md src="\docs\the-novelties.md"></zero-md>
+  <main>
+    <div id="eratosthenes"></div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+    <!-- Load the element definition -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+    <!-- Simply set the `src` attribute to your MD file and win -->
+    <zero-md src="\docs\eratosthenes.md"></zero-md>
+  </main>
+  <footer>
+    <img src="/golden rectangle.png" alt="Golden Rectangle" class="icon">
+  </footer>
 </body>
 </html>
