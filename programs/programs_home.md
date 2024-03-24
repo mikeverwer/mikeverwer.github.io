@@ -4,10 +4,10 @@ I've developed a few small Python tools that help me demonstrate various mathema
 
 On the right sidebar you can find information and links to any documentation for the projects listed.
 
-Some of the applications are made with PySimpleGUI, which is a proprietary software.  The licensing allows for hobbyist development, but there are restrictions on the distribution of software made with this library.  If you would like to use them in your classroom, [send me an email](mailto:mike.verwer@gmail.com) at
+Some of the applications are made with PySimpleGUI, which is a proprietary software.  The licensing allows for hobbyist development, but there are some restrictions on the distribution of software made with this library.  If you would like to use them in your classroom, [send me an email](mailto:mike.verwer@gmail.com) at
 
 > mike.verwer[at]gmail.com
 
 and I can help you with installation.
 
-In the future, I will be moving away from this library to open source alternatives.
+In the future I'll be moving away from this library, to open source alternatives.
