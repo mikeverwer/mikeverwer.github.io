@@ -19,7 +19,7 @@ The simple approach to testing some number, $x$, for primality is to divide $x$ 
 >
 > At this point I have started to find redundant factors, this is because we have passed over $\sqrt{30} \approx 5.47$.
 
-The process can be optimized a bit by only dividing by *prime* numbers less than $ \sqrt{x} $.  The problem with this is the need for a list of primes up to $\sqrt{x}$, which makes the optimization ineffective for large $x$.
+The process can be optimized a bit by only dividing by *prime* numbers less than $\sqrt{x}$.  The problem with this is the need for a list of primes up to $\sqrt{x}$, which makes the optimization ineffective for large $x$.
 
 ## The Algorithm
 
