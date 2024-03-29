@@ -1,12 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
+ <head>
   <meta charset="utf-8"/>
-  <title> Title
+  <title>
+   Article,  ||  Mike Verwer
   </title>
   <style>
-    body {
+   body {
         background-color: #dcdcdc;
+        background-image: url("/assets/images/background1.png");
+        background-attachment: scroll;
     }
 
     zero-md {
@@ -21,6 +24,7 @@
     .logo {
       width: 64px;
       height: auto;
+      margin-left: 75px;
       background: none;
       border: 8px solid transparent;
       position: fixed;
@@ -55,10 +59,26 @@
         background-color: white;
         border: 4px solid white;
     }
-    
+    .author {
+        position: fixed;
+        bottom: 0px;
+        left: 0;
+        font-family: monospace;
+        font-size: 11px;
+        margin: 5px;
+        color: #1b1b1b;
+    }
+    .author a {
+        color: blue;
+        text-decoration: none;
+    }
+    .author a:hover {
+        color: white;
+        text-decoration: underline;
+    }
   </style>
   <script>
-    // Configure MathJax settings
+   // Configure MathJax settings
          MathJax = {
            tex: {
              inlineMath: [
@@ -68,36 +88,39 @@
            }
          }
          addEventListener('zero-md-rendered', () => MathJax.typeset())
-   </script>
-   <!-- zero-md module import -->
-   <script src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js" type="module">
-   </script>
-   <!-- Library for older browsers to support modern features -->
-   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-   </script>
-   <!-- Import MathJax Library -->
-   <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-   </script>
-   <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-   <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js">
-   </script>
-  </head>
-<body>
+  </script>
+  <!-- zero-md module import -->
+  <script src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js" type="module">
+  </script>
+  <!-- Library for older browsers to support modern features -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <!-- Import MathJax Library -->
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js">
+  </script>
+ </head>
+ <body>
   <header>
-    <a href="https://mikeverwer.github.io">
-      <img src="/assets/images/icon.png" alt="Glider" class="logo">
-    </a>
+   <a href="https://mikeverwer.github.io">
+    <img alt="Glider" class="logo" src="/assets/images/icon.png"/>
+   </a>
   </header>
   <main>
-    <!-- Simply set the `src` attribute to your MD file and win -->
-    <zero-md no-shadow="" src="content.md">
-    </zero-md>
-   </main>
-   <div class="author"> 
-    Made with contributions by <a href="https://github.com/Ori-Jakob" target="_blank" >Ori Jakob</a>
-   </div>
+   <!-- Simply set the `src` attribute to your MD file and win -->
+   <zero-md no-shadow="" src="content.md">
+   </zero-md>
+  </main>
+  <div class="author">
+   Made with contributions by
+   <a href="https://github.com/Ori-Jakob" target="_blank">
+    Ori Jakob
+   </a>
+  </div>
   <footer>
-    <img src="/assets/images/golden-rectangle.png" alt="Golden Rectangle" class="icon">
+   <img alt="Golden Rectangle" class="icon" src="/assets/images/golden-rectangle.png"/>
   </footer>
-</body>
+ </body>
 </html>
