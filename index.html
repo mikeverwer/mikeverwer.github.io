@@ -62,7 +62,7 @@
         }
         nav ul li a:hover {
             color: white; /* Change background color on hover */
-            cursor: none;
+            cursor: cell;
         }
         nav.right ul {
             list-style-type: none;
@@ -82,7 +82,7 @@
         }
         nav.right ul li a:hover {
             color: white; /* Change background color on hover */
-            cursor: none;
+            cursor: cell;
         }
         main {
             margin: 20px auto;
@@ -101,19 +101,58 @@
             border: 4px solid white;
             background-color: white;
         }
-        .bottom-right-image {
+        img.bottom-right-image {
             position: fixed;
             max-width: 16px;
             bottom: 10px;
             right: 10px;
             border: none;
         }
-        .bottom-right-image:hover{
+        img.bottom-right-image:hover{
             cursor: none;
             border: none;
         }
+        .author {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            font-family: monospace;
+            font-size: 12px;
+            margin: 10px;
+            color: #1b1b1b;
+        }
+        .author a {
+            color: blue;
+            text-decoration: none;
+        }
+        .author a:hover {
+            color: white;
+            text-decoration: underline;
+        }
   </style>
+  <script>
+   // Configure MathJax settings
+        MathJax = {
+          tex: {
+            inlineMath: [
+              ['$', '$'], //you can change this to the delimiter of your choice
+              ['\\(', '\\)']
+            ]
+          }
+        }
+        addEventListener('zero-md-rendered', () => MathJax.typeset())
+  </script>
+  <!-- zero-md module import -->
   <script src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js" type="module">
+  </script>
+  <!-- Library for older browsers to support modern features -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <!-- Import MathJax Library -->
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js">
   </script>
  </head>
  <body>
@@ -174,25 +213,27 @@
       <a href="">
       </a>
      </li>
+     <li>
+      <a href="">
+      </a>
+     </li>
+     <li>
+      <a href="">
+      </a>
+     </li>
     </ul>
    </nav>
    <main>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
-    </script>
-    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js">
-    </script>
-    <!-- Load the element definition -->
-    <script src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js" type="module">
-    </script>
     <!-- Simply set the `src` attribute to your MD file and win -->
-    <zero-md src="greeting.md">
+    <zero-md no-shadow="" src="greeting.md">
     </zero-md>
-    <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
    </main>
    <a href="/password.html">
     <img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"/>
    </a>
+   <div class="author"> 
+      Made with contributions by: <a href="https://github.com/Ori-Jakob" target="_blank" >Ori Jakob</a>
+   </div>
   </div>
  </body>
 </html>

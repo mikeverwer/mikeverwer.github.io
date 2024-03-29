@@ -113,8 +113,8 @@
             border: none;
         }
   </style>
-    <script>
-        // Configure MathJax settings
+  <script>
+   // Configure MathJax settings
         MathJax = {
           tex: {
             inlineMath: [
@@ -124,21 +124,19 @@
           }
         }
         addEventListener('zero-md-rendered', () => MathJax.typeset())
-      </script>
-    
-      <!-- zero-md module import -->
-      <script
-        type="module"
-        src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
-      ></script>
-    
-      <!-- Library for older browsers to support modern features -->
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      <!-- Import MathJax Library -->
-      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-      <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
-    
+  </script>
+  <!-- zero-md module import -->
+  <script src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js" type="module">
+  </script>
+  <!-- Library for older browsers to support modern features -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <!-- Import MathJax Library -->
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js">
+  </script>
  </head>
  <body>
   <div class="container">
@@ -198,13 +196,17 @@
       <a href="">
       </a>
      </li>
+     <li>
+      <a href="">
+      </a>
+     </li>
     </ul>
    </nav>
    <main>
-    <div id="eratosthenes"></div>
     <!-- Simply set the `src` attribute to your MD file and win -->
-    <zero-md src="/assets/docs/eratosthenes.md" no-shadow></zero-md>
-  </main>
+    <zero-md no-shadow="" src="content.md">
+    </zero-md>
+   </main>
    <a href="/password.html">
     <img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"/>
    </a>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown with MathJax</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #dcdcdc;
+        }
+        main {
+            margin: 20px auto;
+            padding: 20px;
+            width: 60%;
+        }
+        .markdown-container {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <!-- MathJax configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <!-- Polyfill for ES6 features -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <!-- Marked for parsing Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Web Components loader -->
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+</head>
+<body>
+    <main id="markdown-container">
+        <!-- Markdown content will be inserted here -->
+    </main>
+
+    <script>
+        // Function to fetch and render Markdown content
+        async function fetchAndRenderMarkdown(url) {
+            const response = await fetch(url);
+            const markdownText = await response.text();
+            const markdownContainer = document.getElementById("markdown-container");
+            // Use Marked to parse and render Markdown content
+            markdownContainer.innerHTML = marked(markdownText);
+            // After rendering Markdown, let MathJax process the math formulas
+            MathJax.typeset();
+        }
+
+        // Call the function with the URL of your Markdown file
+        fetchAndRenderMarkdown("content.md");
+    </script>
+</body>
+</html>
