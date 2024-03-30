@@ -1,4 +1,4 @@
 # Feature Ideas
 
-- display image on hover over markdown text.
-- convert from static to 
+- display image/text on hover over markdown text.
+- convert to more non-static site that changes the variables with javascript
