@@ -6,7 +6,7 @@ This program generates, what I call, the Novelties.  A member of the Novelties i
 
 The Novelties use a non-positional number system where each novelty is represented as a concatenation of the primes it is composed of; however the primes are represented by the order in which they exist as primes.  
 
-For example: the number 1176, which has a prime factorization of (2^3)(3)(7^2), would be written as a novelty as: ***1&sdot; 1&sdot; 1&sdot; 2&sdot; 4&sdot; 4***, since 2 is the first prime, 3 is the second, and 7 is the fourth.
+For example: the number $1176$, which has a prime factorization of $(2^3)(3)(7^2)$, would be written as a novelty as: ***1$\cdot$1$\cdot$1$\cdot$2$\cdot$4$\cdot$4***, since 2 is the first prime, 3 is the second, and 7 is the fourth.
 
 ### Introduction
 
@@ -23,17 +23,17 @@ Now, it would seem that the next new thing would be to have quadruples. However,
 
 By the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes), we will only encounter new things when we encounter prime numbers, and so there will be **a unique novelty for each prime**.   In this expanded understanding of one-ness, two-ness, and so on, we are referencing the prime numbers by way of the [ordinal numbers](https://en.wikipedia.org/wiki/Ordinal_number).  
 
-Before we describe the construction of an arbitrary novelty, let's point out that it still makes perfect sense for us to talk about all the quadruples, they just aren't *novel*.  They can, however, be broken down into **pieces** that are novel. Like we pointed out earlier, a quadruple is two copies of the novelty ***1***. We take the convention of writing this as 4 = ***1&sdot;  1***
+Before we describe the construction of an arbitrary novelty, let's point out that it still makes perfect sense for us to talk about all the quadruples, they just aren't *novel*.  They can, however, be broken down into **pieces** that are novel. Like we pointed out earlier, a quadruple is two copies of the novelty ***1***. We take the convention of writing this as 4 = ***1 $\cdot$  1***
 
 ## Definition
 
-Let *O*( *n* | S ) denote the position of the element, *n*, in the set, S.  
-Let &#x2119; be the set of all prime numbers.  
-> example: *O*( 5 | &#x2119; ) = 3
+Let $O( n | S )$ denote the position of the element, $n$, in the set, $S$.  
+Let $\mathbb{P}$ be the set of all prime numbers.  
+> example: *O*( 5 | $\mathbb{P}$ ) = 3
 
-1. For every natural number *n*, there is a unique novelty, ***N***
-2. If *n* is prime, ***N*** is a single "digit" novelty, and "digit" = *O*( *n* | &#x2119; )
-3. If *n* is composite: Find the prime factorization of *n* and convert each prime to it's corresponding novelty digit. Concatenate the digits, separated by ' &sdot; ', adding as many copies of each digit as there are factors of the prime.
+1. For every natural number $n$, there is a unique novelty, ***N***
+2. If $n$ is prime, ***N*** is a single "digit" novelty, and "digit" = *O*( $n$ | $\mathbb{P}$ )
+3. If $n$ is composite: Find the prime factorization of $n$ and convert each prime to it's corresponding novelty digit. Concatenate the digits, separated by ' $\cdot$ ', adding as many copies of each digit as there are factors of the prime.
 
 This definition implies that the Novelty number system has infinitely many digits.
 
