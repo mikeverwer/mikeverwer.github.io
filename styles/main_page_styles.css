@@ -1,7 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #dcdcdc;
+    background-image: url("/assets/images/background.png");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
 .container {
-    margin: 0 auto;
+    margin: 0;
     padding-left: 86px;
     padding-right: 86px;
+}
+
+.vspace {
+    flex-grow: 1;
 }
 
 /* Toggle panels on each side of the screen, in the spaces 
@@ -26,16 +43,6 @@
 
 #left-side {
     left: 0;
-}
-
-body {
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #dcdcdc;
-    background-image: url("/assets/images/background.png");
-    background-attachment: scroll;
-    background-repeat: no-repeat;
 }
 
 /* Header. Has <img> icon on left, <a> text on right */
@@ -98,9 +105,8 @@ img:hover {
 /* Markdown content */
 article {
     padding: 10px;
-    flex: 10 200px;
+    flex: 8 200px;
     background-color: #eaeaea;
-    min-height: 75vh;
 }
 
 /* Left and Right Nav Bars */
@@ -158,6 +164,9 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
+    margin-top: auto;
+    background-color: aquamarine;
+    padding: 20px;
 }
 
 .author {
