@@ -3,162 +3,105 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="index, follow" name="robots"/>
+  <meta content="The personal webpage of Mike Verwer, M.Sc. Mathematics - Professor; Mohawk College." name="Mike Verwer Personal Webpage"/>
+  <link href="/styles/main_page_styles.css" rel="stylesheet"/>
   <title>
    primes  ||  Mike Verwer
   </title>
   <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
-  <style>
-   .container {
-            margin: 0 auto;
-            padding-left: 64px;
-            padding-right: 64px;
+  <script>
+   // Determine if both panels are hidden and update the 'zen-mode' button accordingly
+    function updateHideButton(navBars, preCheck) {
+      const button = document.querySelector('button');
+      let closed = '{}';
+      let open = '}{';
+      let bothHidden = true; // Assume both are hidden initially
+      if (preCheck) {
+        closed = '}{'
+        open = '{}'
+      }
+      navBars.forEach(function (navBar) {
+        if (navBar.style.display !== 'none') {
+          bothHidden = false; // If any navbar is visible, both are not hidden
         }
-        body {
-            font-family: Arial, Helvetica, sans-serif, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #dcdcdc;
-            background-image: url("/assets/images/background.png");
-            background-attachment: scroll;
-            background-repeat: no-repeat;
+      });
+      if (bothHidden) {
+        button.textContent = open;
+      } else {
+        button.textContent = closed;
+      }
+      return bothHidden; // Return the status of both navbars
+    }
+
+    // Hide or show both navbars based on the button state
+    function toggleNavBars(navBars, hidden) {
+      navBars.forEach(function (navBar) {
+        if (hidden) {
+          navBar.style.display = 'flex'; // Show the navbar
+        } else {
+          navBar.style.display = 'none'; // Hide the navbar
         }
-        header {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 32px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 52px;
-            padding-right: 52px;
-            text-decoration: none;
-        }
-        header a{
-            text-decoration: black;
-            color: #000;
-        }
-        header a:hover{
-            cursor: none;
-            color: white;
-        }
-        nav.left {
-            width: 200px;
-            float: left;
-        }
-        nav.right {
-            width: 300px;
-            float: right;
-            
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 32px;
-        }
-        nav ul li {
-            padding: 10px;
-            border-bottom: none;
-        }
-        nav ul li a {
-            font-size: 32px;
-            text-decoration: none; /* Remove underline */
-            color: #1b1b1b; /* Change link color */
-            font-weight: bold; /* Make link text bold */
-            display: block; /* Make link text block-level */
-        }
-        nav ul li a:hover {
-            color: white; /* Change background color on hover */
-            cursor: cell;
-        }
-        nav.right ul {
-            list-style-type: none;
-            padding: 32px;
-            text-align: right;
-        }
-        nav.right ul li {
-            padding: 10px;
-            border-bottom: none;
-        }
-        nav.right ul li a {
-            font-size: 26px;
-            text-decoration: none; /* Remove underline */
-            color: #1b1b1b; /* Change link color */
-            font-weight: bold; /* Make link text bold */
-            display: block; /* Make link text block-level */
-        }
-        nav.right ul li a:hover {
-            color: white; /* Change background color on hover */
-            cursor: cell;
-        }
-        main {
-            margin: 20px auto;
-            padding: 20px;
-            width: 60%;
-            background-color: #eaeaea;
-            font-size: larger;
-        }
-        img {
-            padding: 4px;
-            max-width: 100px; /* Adjust as needed */
-            height: auto;
-            border: 4px solid transparent;
-            background-color: none;
-        }
-        img:hover{
-            cursor: none;
-            border: 4px solid white;
-            background-color: white;
-        }
-        img.bottom-right-image {
-            position: fixed;
-            max-width: 16px;
-            bottom: 10px;
-            right: 10px;
-            border: none;
-        }
-        img.bottom-right-image:hover{
-            cursor: none;
-            border: none;
-        }
-        .author {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            font-family: monospace;
-            font-size: 11px;
-            margin: 5px;
-            color: #1b1b1b;
-        }
-        .author a {
-            color: blue;
-            text-decoration: none;
-        }
-        .author a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-  </style>
+      });
+    }
+
+    // Hide the respective navbar if the left or right edge has been clicked
+    function toggleNavBar(event) {
+      const panelID = event.target.id;
+      const button = document.querySelector('button');
+      let navBar;
+      if (panelID === 'left-side') {
+        navBar = document.querySelector('nav.left');
+      } else if (panelID === 'right-side') {
+        navBar = document.querySelector('nav.right');
+      } else {
+        const navBars = document.querySelectorAll('nav');
+        const hidden = updateHideButton(navBars, true); // Toggle the visibility of navbars and update button text
+        toggleNavBars(navBars, hidden); // Hide or show both navbars based on the button state
+        return; // Exit the function since no further action is needed
+      }
+      if (navBar.style.display === 'none') {
+        navBar.style.display = 'flex'; // Show the navbar
+      } else {
+        navBar.style.display = 'none'; // Hide the navbar
+      }
+      updateHideButton(document.querySelectorAll('nav'), false); // Update the button text
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const panelToggleAreas = document.querySelectorAll('.panel-toggle-area');
+      const button = document.querySelector('button');
+      // Add event listener to side panels
+      panelToggleAreas.forEach(function (toggleArea) {
+        toggleArea.addEventListener('click', toggleNavBar);
+      });
+      // Add event listener to the button
+      button.addEventListener('click', toggleNavBar);
+    });
+  </script>
   <script>
    // Configure MathJax settings
-        MathJax = {
-          tex: {
-            inlineMath: [
-              ['$', '$'], //you can change this to the delimiter of your choice
-              ['\\(', '\\)']
-            ]
-          }
-        }
-        addEventListener('zero-md-rendered', () => MathJax.typeset())
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], //you can change this to the delimiter of your choice
+          ['\\(', '\\)']
+        ]
+      }
+    }
+    addEventListener('zero-md-rendered', () => MathJax.typeset())
   </script>
   <script type="module">
    // Configure zero-md
-     document.addEventListener("DOMContentLoaded", function() {
-         const style = document.createElement('style');
-         style.textContent = `
-             p {
-                 font-size: larger;
-             }
-         `;
-         document.head.appendChild(style);
-     });
+    document.addEventListener("DOMContentLoaded", function () {
+      const style = document.createElement('style');
+      style.textContent = `
+						 p {
+								 font-size: larger;
+						 }
+				 `;
+      document.head.appendChild(style);
+    });
   </script>
   <!-- zero-md module import -->
   <script src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js" type="module">
@@ -174,10 +117,13 @@
   </script>
  </head>
  <body>
+  <!-- "zen-mode" button (hides/shows both nav bars) -->
+  <button>
+   {}
+  </button>
   <div class="container">
    <header>
     <a href="/index.html">
-     <!-- Replace "/index.html" with the URL of homepage -->
      <img alt="Website Logo" src="/assets/images/icon.png"/>
     </a>
     <a href="/programs/playing_with_primes.html">
@@ -188,59 +134,69 @@
      <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
     </a>
    </header>
-   <nav class="left">
-    <ul>
-     <li>
-      <a href="/teaching/teaching_home.html">
-       Teaching
-      </a>
-     </li>
-     <li>
-      <a href="/programs/programs_home.html">
-       Programs
-      </a>
-     </li>
-     <li>
-      <a href="https://github.com/mikeverwer/" target="_blank">
-       GitHub
-      </a>
-     </li>
-     <li>
-      <a href="/youtube/youtube_home.html">
-       Youtube
-      </a>
-     </li>
-    </ul>
-   </nav>
-   <nav class="right">
-    <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
-    <ul>
-     <li>
-      <a href="/assets/docs/eratosthenes.html" target="_blank">
-       The Sieve
-      </a>
-     </li>
-     <li>
-      <a href="/assets/docs/the-novelties.html" target="_blank">
-       The Novelties
-      </a>
-     </li>
-    </ul>
-   </nav>
-   <main>
-    <!-- Simply set the `src` attribute to your MD file and win -->
-    <zero-md no-shadow="" src="playing_with_primes.md">
-    </zero-md>
-   </main>
-   <a href="/password.html">
-    <img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"/>
-   </a>
+   <div class="main-section">
+    <!-- Toggle Area -->
+    <div class="panel-toggle-area" id="left-side">
+    </div>
+    <nav class="left">
+     <ul>
+      <li>
+       <a href="/teaching/teaching_home.html">
+        Teaching
+       </a>
+      </li>
+      <li>
+       <a href="/programs/programs_home.html">
+        Programs
+       </a>
+      </li>
+      <li>
+       <a href="https://github.com/mikeverwer/" target="_blank">
+        GitHub
+       </a>
+      </li>
+      <li>
+       <a href="/youtube/youtube_home.html">
+        Youtube
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <article>
+     <!-- Simply set the `src` attribute to your MD file and win -->
+     <zero-md no-shadow="" src="playing_with_primes.md">
+     </zero-md>
+    </article>
+    <nav class="right">
+     <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
+     <ul>
+      <li>
+       <a href="/assets/docs/eratosthenes.html" target="_blank">
+        The Sieve
+       </a>
+      </li>
+      <li>
+       <a href="/assets/docs/the-novelties.html" target="_blank">
+        The Novelties
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <!-- Navbar Toggle Area -->
+    <div class="panel-toggle-area" id="right-side">
+    </div>
+   </div>
+  </div>
+  <div class="footer">
    <div class="author">
-    Made with contributions by
+    Made by Mike Verwer with contributions by
     <a href="https://github.com/Ori-Jakob" target="_blank">
      Ori Jakob
     </a>
    </div>
+   <a href="/password.html">
+    <img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"/>
+   </a>
   </div>
  </body>
 </html>
