@@ -23,6 +23,4 @@ This is a test, [Hover over me](/assets/images/fair_die.png "/assets/images/fair
         z-index: 1;
         display: block; /* Ensures the hover box has the size of the image */
         width: 200px; /* Set a fixed width for the hover box */
-        height: 200px; /* Set a fixed height for the hover box */
     }
-</style>

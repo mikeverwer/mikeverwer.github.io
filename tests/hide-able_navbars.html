@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Panel</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #panelToggleArea {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100px;
+      /* Width of the toggle area */
+      background-color: #fff;
+      /* Semi-transparent background */
+      cursor: pointer;
+      z-index: 2;
+      /* Ensure the toggle area is above other elements */
+    }
+
+    #panelToggleArea:hover {
+      background-color: rgba(200, 200, 200, 0.1);
+    }
+
+    #linksPanel {
+      position: fixed;
+      top: 0;
+      left: 100px;
+      /* Adjusted to start after the toggle area */
+      width: 200px;
+      /* Width of the links panel */
+      height: 100%;
+      padding: 10px;
+      border-right: 1px solid #ccc;
+      display: none;
+      /* Initially hidden */
+      z-index: 1;
+      /* Ensure the links panel is below the toggle area */
+    }
+
+    #linksPanel a {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    #linksPanel a:hover {
+      background-color: #fff;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const panelToggleArea = document.getElementById('panelToggleArea');
+      const linksPanel = document.getElementById('linksPanel');
+      linksPanel.style.display = 'none'
+      // Toggle the link panel on click
+      panelToggleArea.addEventListener('click', function () {
+        if (linksPanel.style.display === 'none') {
+          linksPanel.style.display = 'block';
+        } else {
+          linksPanel.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="panelToggleArea"></div>
+  <div id="linksPanel">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <!-- Add more links as needed -->
+  </div>
+</body>
+
+</html>
