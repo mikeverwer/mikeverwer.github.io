@@ -2,7 +2,7 @@
 
 Unfortunately, I can't have my YouTube videos listed publicly. If you are one of my current students and want to request a link to a video, or submit a video topic request, [send an email](mailto:mike.verwer@mohawkcollege.ca) to my school email:  
 
-> mike.verwer[at]mohawkcollege.ca
+> `mike.verwer@mohawkcollege.ca`
 
 with the subject:
 

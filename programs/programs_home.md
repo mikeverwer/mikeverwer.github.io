@@ -6,8 +6,6 @@ On the right sidebar you can find information and links to any documentation for
 
 Some of the applications are made with PySimpleGUI, which is a proprietary software.  The licensing allows for hobbyist development, but there are some restrictions on the distribution of software made with this library.  If you would like to use them in your classroom, [send me an email](mailto:mike.verwer@gmail.com) at
 
-> mike.verwer[at]gmail.com
+> `mike.verwer@gmail.com`
 
 and I can help you with installation.
-
-In the future I'll be moving away from this library, to open source alternatives.

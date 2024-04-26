@@ -11,6 +11,16 @@ body {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
+a {
+    color: #0047ab;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
 .container {
     margin: 0;
     padding-left: 86px;
@@ -19,15 +29,16 @@ body {
 
 .vspace {
     flex-grow: 1;
+    min-height: 25px;
 }
 
 /* Toggle panels on each side of the screen, in the spaces 
    on the outside of the container */
 .panel-toggle-area {
     position: fixed;
-    top: 145.6px;
+    top: 158.767px;
     bottom: 55px;
-    width: 75px;
+    width: 64px;
     cursor: pointer;
     z-index: 1;
     /* Ensure the toggle area is above other elements */
@@ -56,7 +67,6 @@ header {
 }
 
 header a {
-    /* text-decoration: black; */
     color: #000;
 }
 
@@ -74,7 +84,7 @@ button {
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: large;
+    font-size: 22px;
 }
 
 button:hover {
@@ -83,7 +93,7 @@ button:hover {
 
 img {
     padding: 4px;
-    max-width: 100px;
+    max-width: 74.333px;
     /* Adjust as needed */
     height: auto;
     border: 4px solid transparent;
@@ -126,6 +136,7 @@ nav.right {
 }
 
 nav ul {
+    margin: 0;
     list-style-type: none;
     text-align: left;
     padding-left: 0px;
@@ -137,16 +148,18 @@ nav.right ul {
 }
 
 nav ul li {
-    padding: 10px;
-    border-bottom: none;
+    /* border-bottom: none; */
+    /* position: relative; */
 }
 
 nav ul li a {
+    padding: 10px;
     font-size: 32px;
     text-decoration: none;
     color: #1b1b1b;
     font-weight: bold;
     display: inline-block;
+    /* position: fixed; */
 }
 
 nav.right ul li a {
@@ -166,32 +179,24 @@ footer {
     left: 0;
     margin-top: auto;
     background-color: aquamarine;
-    padding: 20px;
+    padding-top: 32px;
+    padding-bottom: 0px;
 }
 
 .author {
     margin: 5px;
-    padding-top: 32px;
-    padding-bottom: 0px;
-    font-size: 11px;
+    /* padding-top: 32px;
+    padding-bottom: 0px; */
+    font-size: 10px;
     font-family: monospace;
     color: #1b1b1b;
-}
-
-a {
-    color: blue;
-    text-decoration: none;
-}
-
-a:hover {
-    color: white;
-    text-decoration: underline;
+    background-color: #dcdcdc;
 }
 
 /* Fixed, tiny image in the bottom right */
 img.bottom-right-image {
     position: fixed;
-    max-width: 16px;
+    max-width: 12px;
     bottom: 10px;
     right: 10px;
     border: 0px;
@@ -204,15 +209,30 @@ img.bottom-right-image:hover {
 
 /* Set display configurations for mobile/small screen size */
 @media only screen and (max-width: 700px) {
+    p {
+        font-size: medium;
+    }
+    .container {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
     header {
         font-size: 20px;
     }
+
+    #home-button {
+        max-width: 48px;
+    }
+
     .main-section {
         flex-direction: column;
     }
-    /*
-    .right, .left {
-        display: none;
+
+    nav ul li {
+        padding: 5px;
     }
-    */
+    
+    nav ul li a {
+        font-size: 26px;
+    }
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Hover Effect</title>
+<style>
+  /* Style for the container */
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  /* Style for the button */
+  .button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Style for the input field */
+  .input-field {
+    position: fixed;
+    top: 0;
+    right: 50px;
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+  }
+
+  /* Hover effect for the container */
+  .container:hover .input-field {
+    display: block; /* Show input field when container is hovered over */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <button class="button">Hover Me</button>
+  <input type="text" class="input-field" placeholder="Enter something">
+</div>
+
+</body>
+</html>
