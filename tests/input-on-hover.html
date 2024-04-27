@@ -7,11 +7,12 @@
 <style>
   /* Style for the container */
   .container {
+    display: inline-block; /* Display as inline block */
     text-align: center;
-    margin-top: 50px;
+    position: relative; /* Positioning context */
   }
 
-  /* Style for the button */
+  /* Style for the main button */
   .button {
     background-color: #007bff;
     color: white;
@@ -20,20 +21,34 @@
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    position: fixed;
+    right: 0;
   }
 
-  /* Style for the input field */
-  .input-field {
-    position: fixed;
-    top: 0;
-    right: 50px;
+  /* Style for the small buttons */
+  .small-buttons {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 10px); /* Adjust as needed */
+    transform: translateY(-50%);
     display: none; /* Initially hidden */
-    margin-top: 10px;
+  }
+
+  .small-buttons button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
   }
 
   /* Hover effect for the container */
-  .container:hover .input-field {
-    display: block; /* Show input field when container is hovered over */
+  .container:hover .small-buttons {
+    display: flex; /* Show small buttons when container is hovered over */
+    flex-direction: column; /* Align small buttons vertically */
+    align-items: flex-end; /* Align small buttons to the right */
   }
 </style>
 </head>
@@ -41,7 +56,11 @@
 
 <div class="container">
   <button class="button">Hover Me</button>
-  <input type="text" class="input-field" placeholder="Enter something">
+  <div class="small-buttons">
+    <button>A</button>
+    <button>B</button>
+    <button>C</button>
+  </div>
 </div>
 
 </body>
