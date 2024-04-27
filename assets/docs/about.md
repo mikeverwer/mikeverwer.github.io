@@ -8,5 +8,5 @@ If you are a student at Mohawk, stop by my office in E208.
 
 ## Contact
 
-Personal : `mike.verwer@gmail.com`
+Personal : `mike.verwer@gmail.com`  
 Mohawk  : `mike.verwer@mohawkcollege.ca`
