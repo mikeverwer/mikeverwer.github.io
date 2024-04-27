@@ -1,7 +1,6 @@
 // -------------------------------------------------------------------------------------------
 // Animates the `home` icon and sets it to a random frame on page load.
 // -------------------------------------------------------------------------------------------
-
 // Set the initial image index to 1
 var currentImageIndex = getRandomInt(1, 4);
 var intervalId;
@@ -16,7 +15,6 @@ function setHeaderImage() {
     document.getElementById("home-button").src = imagePath;
 
     // Increment the image index
-    console.log("image index", currentImageIndex)
     currentImageIndex++;
 
     // Reset to 1 if it exceeds the maximum value (4 in this case)
@@ -25,7 +23,6 @@ function setHeaderImage() {
     }
 }
 
-// Call the function when the window loads
 window.onload = setHeaderImage;
 
 // Event listener for mouseover
@@ -44,16 +41,15 @@ document.addEventListener('DOMContentLoaded', function () {
 // -------------------------------------------------------------------------------------------
 // Toggle the Navbars
 // -------------------------------------------------------------------------------------------
-
 // Determine if both panels are hidden and update the 'zen-mode' button accordingly
-function updateHideButton(navBars, preCheck) {
+function updateHideButton(navBars, beforeCheck) {
     const button = document.querySelector('button');
-    let closed = '{}';
-    let open = '}{';
+    let closedBraces = '{}';
+    let openBraces = '}{';
     let bothHidden = true; // Assume both are hidden initially
-    if (preCheck) {
-        closed = '}{'
-        open = '{}'
+    if (beforeCheck) {
+        closedBraces = '}{'
+        openBraces = '{}'
     }
     navBars.forEach(function (navBar) {
         if (navBar.style.display !== 'none') {
@@ -61,9 +57,9 @@ function updateHideButton(navBars, preCheck) {
         }
     });
     if (bothHidden) {
-        button.textContent = open;
+        button.textContent = openBraces;
     } else {
-        button.textContent = closed;
+        button.textContent = closedBraces;
     }
     return bothHidden; // Return the status of both navbars
 }
@@ -116,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // -------------------------------------------------------------------------------------------
 // Configuring `MathJax` and `zero-md`.
 // -------------------------------------------------------------------------------------------
-
 // Configure MathJax settings; LaTeX rendering
 MathJax = {
     tex: {
