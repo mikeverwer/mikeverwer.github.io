@@ -1,9 +1,16 @@
-// -------------------------------------------------------------------------------------------
-// Animates the `home` icon and sets it to a random frame on page load.
-// -------------------------------------------------------------------------------------------
 // Set the initial image index to 1
 var currentImageIndex = getRandomInt(1, 4);
 var intervalId;
+
+// ███████ ██    ██ ███    ██  ██████ ████████ ██  ██████  ███    ██ ███████ 
+// ██      ██    ██ ████   ██ ██         ██    ██ ██    ██ ████   ██ ██      
+// █████   ██    ██ ██ ██  ██ ██         ██    ██ ██    ██ ██ ██  ██ ███████ 
+// ██      ██    ██ ██  ██ ██ ██         ██    ██ ██    ██ ██  ██ ██      ██ 
+// ██       ██████  ██   ████  ██████    ██    ██  ██████  ██   ████ ███████ 
+                                          
+// -------------------------------------------------------------------------------------------
+// Animates the `home` icon and sets it to a random frame on page load.
+// -------------------------------------------------------------------------------------------
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -22,21 +29,6 @@ function setHeaderImage() {
         currentImageIndex = 1;
     }
 }
-
-window.onload = setHeaderImage;
-
-// Event listener for mouseover
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById("home-button").addEventListener("mouseover", function () {
-        setHeaderImage;
-        intervalId = setInterval(setHeaderImage, 500); // Call setHeaderImage every 1/3 second
-    });
-
-    // Event listener for mouseout
-    document.getElementById("home-button").addEventListener("mouseout", function () {
-        clearInterval(intervalId); // Stop calling setHeaderImage
-    });
-});
 
 // -------------------------------------------------------------------------------------------
 // Toggle the Navbars
@@ -98,20 +90,49 @@ function toggleNavBar(event) {
     updateHideButton(document.querySelectorAll('nav'), false); // Update the button text
 }
 
+// ██████   ██████  ███    ███     ██       ██████   █████  ██████  ███████ ██████  
+// ██   ██ ██    ██ ████  ████     ██      ██    ██ ██   ██ ██   ██ ██      ██   ██ 
+// ██   ██ ██    ██ ██ ████ ██     ██      ██    ██ ███████ ██   ██ █████   ██   ██ 
+// ██   ██ ██    ██ ██  ██  ██     ██      ██    ██ ██   ██ ██   ██ ██      ██   ██ 
+// ██████   ██████  ██      ██     ███████  ██████  ██   ██ ██████  ███████ ██████
+
 document.addEventListener('DOMContentLoaded', function () {
+    // -------------------------------------------------------------------------------------------
+    // Set the home button icon and animate the glider on hover.
+    // -------------------------------------------------------------------------------------------
+    window.onload = setHeaderImage;
+    document.getElementById("home-button").addEventListener("mouseover", function () {
+        setHeaderImage;
+        intervalId = setInterval(setHeaderImage, 500); // Call setHeaderImage every 1/2 second
+    });
+    document.getElementById("home-button").addEventListener("mouseout", function () {
+        clearInterval(intervalId); // Stop calling setHeaderImage
+    });
+    
+    // -------------------------------------------------------------------------------------------
+    // Toggle the navbars via side-panels or button.
+    // -------------------------------------------------------------------------------------------
     const panelToggleAreas = document.querySelectorAll('.panel-toggle-area');
     const button = document.querySelector('button');
-    // Add event listener to side panels
-    panelToggleAreas.forEach(function (toggleArea) {
+    panelToggleAreas.forEach(function (toggleArea) {  // Add event listener to side panels
         toggleArea.addEventListener('click', toggleNavBar);
     });
-    // Add event listener to the button
-    button.addEventListener('click', toggleNavBar);
+    button.addEventListener('click', toggleNavBar); // Add event listener to the button
+    
+    // -------------------------------------------------------------------------------------------
+    // Configure `zero-md`.
+    // -------------------------------------------------------------------------------------------
+    const style = document.createElement('style');
+    style.textContent = `
+                        p {
+                                font-size: larger;
+                        }
+                `;
+    document.head.appendChild(style);
+
+
 });
 
-// -------------------------------------------------------------------------------------------
-// Configuring `MathJax` and `zero-md`.
-// -------------------------------------------------------------------------------------------
 // Configure MathJax settings; LaTeX rendering
 MathJax = {
     tex: {
@@ -122,14 +143,3 @@ MathJax = {
     }
 }
 addEventListener('zero-md-rendered', () => MathJax.typeset())
-
-// Configure zero-md
-document.addEventListener("DOMContentLoaded", function () {
-    const style = document.createElement('style');
-    style.textContent = `
-                        p {
-                                font-size: larger;
-                        }
-                `;
-    document.head.appendChild(style);
-});
