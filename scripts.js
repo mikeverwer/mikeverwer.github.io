@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.onload = setHeaderImage;
     document.getElementById("home-button").addEventListener("mouseover", function () {
         setHeaderImage;
-        intervalId = setInterval(setHeaderImage, 500); // Call setHeaderImage every 1/2 second
+        intervalId = setInterval(setHeaderImage, 387.1); // Call setHeaderImage every 1/2 second
     });
     document.getElementById("home-button").addEventListener("mouseout", function () {
         clearInterval(intervalId); // Stop calling setHeaderImage

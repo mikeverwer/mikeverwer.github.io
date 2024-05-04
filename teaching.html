@@ -3,17 +3,13 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="noindex, nofollow" name="robots"/>
-  <meta content="Information about YouTube videos made by Mike Verwer.
-Contact me to request a video.
-
-
-
-" name="description"/>
+  <meta content="index, nofollow" name="robots"/>
+  <meta content="Explore my teaching history and the courses I teach.  You can also take a look at my teaching portfolio which contains my teaching philosophy and all of my credentials." name="description"/>
   <link href="/styles/main_page_styles.css" rel="stylesheet"/>
+  <link href="/assets/images/favicon.png" rel="icon" type="image/png"/>
   <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
   <title>
-   youtube
+   teaching
   </title>
   <!-- zero-md module import -->
   <script src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js" type="module">
@@ -38,13 +34,13 @@ Contact me to request a video.
   </button>
   <div class="container">
    <header>
-    <a href="/index.html">
+    <a href="https://mikeverwer.github.io/index.html">
      <img alt="Home" id="home-button" src=""/>
     </a>
-    <a href="/youtube/youtube_home.html">
+    <a href="/teaching.html">
      <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
      <h1>
-      YouTube
+      Teaching
      </h1>
      <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
     </a>
@@ -56,12 +52,12 @@ Contact me to request a video.
     <nav class="left">
      <ul>
       <li>
-       <a href="/teaching/teaching_home.html">
+       <a href="/teaching.html">
         Teaching
        </a>
       </li>
       <li>
-       <a href="/programs/programs_home.html">
+       <a href="/programs.html">
         Programs
        </a>
       </li>
@@ -71,7 +67,7 @@ Contact me to request a video.
        </a>
       </li>
       <li>
-       <a href="/youtube/youtube_home.html">
+       <a href="/youtube.html">
         Youtube
        </a>
       </li>
@@ -79,12 +75,20 @@ Contact me to request a video.
     </nav>
     <article>
      <!-- Simply set the `src` attribute to your MD file and win -->
-     <zero-md no-shadow="" src="youtube_home.md">
+     <zero-md no-shadow="" src="/assets/docs/teaching.md">
      </zero-md>
+     <p id="article-date">
+      Last updated: 2024-05-03
+     </p>
     </article>
     <nav class="right">
      <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
      <ul>
+      <li>
+       <a href="/assets/docs/teaching_portfolio.pdf" target="_blank">
+        Teaching Portfolio
+       </a>
+      </li>
      </ul>
     </nav>
     <!-- Navbar Toggle Area -->
@@ -104,6 +108,12 @@ Contact me to request a video.
    <a href="/password.html">
     <img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"/>
    </a>
+   <div class="last-modified">
+    Last Modified:
+    <yyyy-mm-dd-hh:mm>
+     2024-05-03
+    </yyyy-mm-dd-hh:mm>
+   </div>
   </div>
  </body>
 </html>

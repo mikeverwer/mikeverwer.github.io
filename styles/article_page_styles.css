@@ -250,6 +250,7 @@ img.bottom-right-image:hover {
 
     #home-button {
         max-width: 48px;
+        position: inherit;
     }
 
     .main-section {
