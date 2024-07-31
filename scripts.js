@@ -122,14 +122,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // -------------------------------------------------------------------------------------------
     // Configure `zero-md`.
     // -------------------------------------------------------------------------------------------
-    const style = document.createElement('style');
-    style.textContent = `
-                        p {
-                                font-size: larger;
-                        }
-                `;
-    document.head.appendChild(style);
-
 
 });
 
