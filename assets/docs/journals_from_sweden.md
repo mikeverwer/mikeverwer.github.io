@@ -1,6 +1,6 @@
 # Journals from Sweden - Getting Away From Being Pretty Much A Husk Of A Human Being
 
-**Author's Note:** Footnotes are intended to be read as they are encountered. Author's Notes signify things that were written after the trip and will be denoted with a *.
+__Author's Note:__ Footnotes are intended to be read as they are encountered. Author's Notes signify things that were written after the trip and will be denoted with a *.
 
 ## June 28, 1:53 pm
 
@@ -73,7 +73,7 @@ My attempt to coax the kitty over for a polite petting was successful. Not much 
 </details>
 
 Retreated back into the apartment, feeling slightly worse each moment. Already dreading the avalanche of "How was the trip!?"'s:  
-"Great$^{[1]}$!",  "Got to see old friends$^{[2]}$!", "And met a whole bunch of cool people$^{[3]}$."  
+"Great$^{[1]}$!",  "Got to see old friends$^{[2]}$!", "Met a whole bunch of cool people$^{[3]}$."  
 
 Seems pretty clear that the requirement to teach this evening is causing this snap-back-to-reality, we're-not-in-Kansas-anymore, vacation's-over-pal style of Depression (TM).  Not to mention I have this acute feeling that I've overstayed my welcome some. This isn't actually my fault.  My generous host is undergoing some relationship woes that have made the living arrangements somewhat awkward. I am getting the distinct, but extremely well-hidden, impression that I am "stepping on toes" and I can't shake the feeling that I may be unintentionally contributing to an un-mendable tear.*
 
@@ -94,18 +94,18 @@ I made it to "My" cafe$^{[1]}$  in time for the breakfast menu today: 79 kr for 
 
 I sit at the tables on the sidewalk outside the cafe and read while passersby, both pedestrian and vehicular, give me a not-quite polite look. Something between a glance, a side-eye, and a stare.  If I look up to meet the gaze$^{[3]}$ they look away quickly, somewhat abashedly.
 
-The look comes from the fact that, as an unspoken rule, Swedes do not dress in colour. Every single person here$^{[4]}$ dresses exclusively in white, black and beige$^{[5]}$.  Splashes of dreary colour are permitted as accent pieces of an article or as part of an otherwise grey-scale pattern, and you may wear a jacket that is a solid colour as long as the rest of your outfit fits the W.B.B. mold. Business Casual Blue is allowed.  T-shirts of a fixed colour are sanctioned only if they use black/grey pronouns.
+The look comes from the fact that, as an unspoken rule, Swedes do not dress in colour. Every single person here$^{[4]}$ dresses exclusively in white, black, and beige$^{[5]}$.  Splashes of dreary colour are permitted as accent pieces of an article or as part of an otherwise grey-scale pattern, and you may wear a jacket that is a solid colour as long as the rest of your outfit fits the W.B.B. mold.  Business Casual Blue is allowed.  T-shirts of a fixed colour are sanctioned only if they use black/grey pronouns.
 
 I, on the other hand, have been wearing a flamboyantly coloured jacket. It has various shades of cyans, yellows, pinks, purples, and oranges in striped and woven patterns, and today have also donned a deep mustard yellow long-sleeved shirt-hoodie thing below the jacket$^{[6]}$. Personally, I think I pull it off quite well; i.e. I looking fucking great in this shit.
 
-It is wholly impossible to tell if people are staring in awe at the sight of such a coloured person$^{[7]}$ or are offended at being confronted, without consent, to the hideousness of it all.  The incredulous looks are age independent as well, although the quality of the look may have some demographic differences.  Surprisingly, the older folks have a far less judgmental valence in their eyes, but the staring is overt. It's mostly a look of eye-popping surprise, like a pink rabbit has been pulled out of a visibly gay hat right in front of them.
+It is wholly impossible to tell if people are staring in awe at the sight of such a coloured person$^{[7]}$ or are offended at being confronted, without consent, to the hideousness of it all.  The incredulous looks are age independent as well, although the quality of the look may have *some* demographic differences.  Surprisingly, the older folks have a far less judgmental valence in their eyes, but the staring is overt. It's mostly a look of eye-popping surprise, like a pink rabbit has been pulled out of a visibly gay hat right in front of them.
 
 Young people are much more discrete, never turning their heads to look, but their eyes are glued to me as they walk past; like those paintings that seem to always be staring at you no matter where in the gallery you happen to be standing, except instead of the viewer moving about and the eyes following it's the paintings themselves that are moving while maintaining eye-contact. As if the gallery were a long hallway with the paintings hung on a clothesline style pulley system and instead of walking down the hallway, patrons stand in place while the paintings view *them*$^{[8]}$ as they pass by.  The side-eye stare from the youngsters is definitely judgmental.  There is a look of disgust in their faces, and I even caught a proper scoff once.
 
 As I am writing this, I've just turned around$^{[9]}$ and I now realize that I have been sat in front of the windowed-displaying menu, and may have been reading slightly too deeply into (some of) these looks...
 
 > $^{[1]}$ I have come here nearly every morning for breakfast and to read. I don't recall the name$^{[a]}$. It is very a Swedish name in the sense that the word looks very much like a word in the Swedish language.  
->> $^{[a]}$ (and never learned it).  
+>> $^{[a]}$ (and never learned it)  
 >
 > $^{[2]}$ (with one refill)  
 > $^{[3]}$ It can be felt.  
@@ -150,7 +150,7 @@ I may be posted up here a while so I'll do my best to describe the scenery/decor
 > $^{[1]}$ (or apparently something called a "situationship")  
 > $^{[2]}$ AYNN is sitting behind me regaling details to her$^{[a]}$ friend. The friend got exactly zero words in.  
 >> $^{[a]}$ (presumable)  
-> 
+>
 > $^{[3]}$ So symmetric as to actually be ugly, just in arrangement alone.  
 > $^{[4]}$ On a single wall btw.  
 > $^{[5]}$ My favourite photo by far. It's a really cool close up of the face that is staring directly into the camera with intense, beautiful, piercing yellow eyes.  
