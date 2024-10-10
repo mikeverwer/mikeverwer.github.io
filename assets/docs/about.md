@@ -4,7 +4,7 @@ I'm a professor of Mathematics and Statistics, currently at Mohawk College.  I h
 
 Outside of mathematics, I like to collect books and records. In my spare time, I work on various programming projects and I have fun making digital art and graphic design.  I also write things from time to time.  Take a look at [Programs](/programs/programs_home.html) to see some of the things I've made. You can also check out my github via the left sidebar.
 
-If you are a student at Mohawk, stop by my office in E208.
+If you are a student at Mohawk, feel free to stop by my office in E208 and chat.
 
 ## Contact
 

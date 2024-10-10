@@ -1,3 +1,3 @@
 # Hello
 
-### I'm Mike.
+### I'm [Mike](/about.html).
