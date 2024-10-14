@@ -39,7 +39,7 @@ I think it is important to recognize here that we are not exactly removing all m
 We can optimize step 3 by starting our search for multiples at $p^2$ instead of $2p$.  This is because every multiple of $p$ less than $p^2$ is a multiple of a prime less than $p$. Therefore, we have already scratched them all out when we found the smaller primes.  As an example, consider the first three primes, $2$, $3$, and $5$.  
 >$2$ is prime and so we scratch out all multiples of $2$ and we move on to the next prime, $3$.  
 Now we move three units to the right and land on $6$, but $6=2\times3$ so we scratched it out when we found all the multiples of $2$.  The first thing we have no information on is $3\times3 = 9 = 3^2$.  Start from here and scratch out all multiples of 3.  
-When we move on to $5$, we know that $2\times5 =10$ was scratched out during the $2$'s and $3\times5=15$ was scratched out during the $3$'s.  $4\times5$ was also scratched out during the $2$'s since $4=2\times2$.  Therefore, we can start at $5^2=25.
+When we move on to $5$, we know that $2\times5 =10$ was scratched out during the $2$'s and $3\times5=15$ was scratched out during the $3$'s.  $4\times5$ was also scratched out during the $2$'s since $4=2\times2$.  Therefore, we can start at $5^2=25$.
 
 With the above optimization, we can rewrite the full implementation as follows:
 
