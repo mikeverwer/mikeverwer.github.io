@@ -120,6 +120,15 @@ article {
     background-color: #eaeaea;
 }
 
+blockquote {
+    background-color: #c2c1d1;
+    color: #1b1b1b !important;
+}
+
+code {
+    color: #fff
+}
+
 #article-date{
   font-size: 0.8em; /* Adjust the font size as needed */
   margin-top: 64px; /* Adjust the margin to position it correctly */

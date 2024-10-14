@@ -235,6 +235,13 @@ img.bottom-right-image:hover {
     background-color: white;
 }
 
+
+blockquote {
+    background-color: #c2c1d1;
+    color: #1b1b1b !important;
+}
+
+
 /* Set display configurations for medium/phone (max: 767px/479px) screen sizes */
 @media only screen and (max-width: 767px) {
     p {
