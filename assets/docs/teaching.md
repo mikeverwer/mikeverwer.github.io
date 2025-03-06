@@ -2,7 +2,7 @@
 
 For a full look at my teaching credentials, including resume, teaching philosophy, samples of work, and student feedback; see my Teaching Portfolio by clicking the link in the right sidebar.
 
-I've been teaching at Mohawk College since 2019.  The main courses I teach are Math for Computer Studies and Discrete Math & Statistics; however I have also taught introductory Business Math, Math for Trades, and Calculus.
+I've been teaching at Mohawk College since 2019.  The main courses I teach are Math for Computer Studies and Discrete Math & Statistics; however I have also taught numerous other math courses.
 
 ---
 
