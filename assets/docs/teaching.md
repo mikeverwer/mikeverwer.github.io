@@ -24,6 +24,18 @@ The typical example of a discrete set is the set of Integers.  In fact all discr
 After this we shift our focus to counting and probabilities, and then finish the course with an exploration of introductory statistics.
 </details>
 
+### MATH10088 - Technical Math 1 | [School Link](https://cereg.mohawkcollege.ca/course?courseCode=MATH10088)
+
+<details><summary><b>Click to see course description</b></summary>
+This is the first math course for various engineering programs; including civil and mechanical engineering,
+architectural technology, and others.
+<br>
+The content focuses on core math skills for problem solving and analytical thinking. It begins with a review of algebra,
+calculation methods, and unit conversion. Afterwards, we move into problem solving techniques involving algebra and
+linear equations, then moving into a study of angles, and triangle trigonometry, and ending with systems of linear
+equations.
+</details>
+
 ### XMTH10001 - Math for Analytics (Calculus) | [School Link](https://myssb.mohawkcollege.ca/mcprod/psecrsdes.P_CrseGet_PS?subj_code=XMTH&crse_numb=10001&term_code=202330&prg=392&vrs=23-A)
 
 <details><summary><b>Click to see course description</b></summary>
@@ -52,7 +64,8 @@ This course begins with foundational math concepts in numeracy and algebraic ski
 
 | Semester | Course(s) | Section(s) |
 | - | - | - |
-| **Fall 2024** | **XMTH10001 <br> MECH10051 <br> CALC10000**| **T01 <br> T02 <br> T01** |
+| **Winter 2025** | **MATH10064 <br> MATH10088 <br> MECH10051** | **T03 <br> T02 <br> T01** |
+| Fall 2024 | XMTH10001 <br> MECH10051 <br> CALC10000 | T01 <br> T02 <br> T01 |
 | Summer 2024 | MATH10042 <br> MATH10064| T02 <br> T02, T05 |
 | Spring 2024 | MATH10042 <br> MATH10064| T02 <br> T02 |
 | Winter 2024 | MATH10064 | T04, T05, T10 |

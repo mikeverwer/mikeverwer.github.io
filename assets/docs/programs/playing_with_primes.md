@@ -57,5 +57,3 @@ and each prime acts as a 'digit' in the representation. Therefore, the primes ar
 first in the novelty ordering.
 
 There is also a popup conversion chart between the primes and their ordinal value in the list of primes.
-
-### [Click here to find a downloadable executable from GitHub.](https://github.com/mikeverwer/novelties/releases/)
