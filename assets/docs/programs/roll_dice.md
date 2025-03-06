@@ -4,6 +4,10 @@ This program was made to showcase the Central Limit Theorem, which is a seminal 
 
 The program uses rolling dice and taking the **sum of the roll** as an example.  
 
+## [Click here to find a downloadable executable from GitHub.](https://github.com/mikeverwer/roll-dice/releases)
+
+---
+
 ## Description
 
 The user can choose an arbitrary probability distribution for the faces of a six sided die by using auto-adjusting sliders.  There are also some useful presets and a randomizer.  The user also enters the number of dice to roll per trial, $n$, and the number of trials to simulate, *T*.  
@@ -19,8 +23,6 @@ Selecting a bar on the convolution graph, or clicking on one of the bins below t
 ![UI Screen Shot](/assets/images/roll-dice-ss.png)
 
 I find this to be a very useful tool to watch the CLT in action, and 'prove' the theorem to students in a purely visual way.  It is also an excellent way to reinforce the idea that theoretical outcomes for stochastic procedures are inherently unreliable for small sample sizes. The best way to show this is by setting the distribution to the `Fair` preset and rolling 1 die. Even with 200 rolls, the resulting outcomes will usually be wildly imbalanced.  However, if you increase it to 1000 or 2000 rolls, the results will still be imbalanced ***but***, relative to how many outcomes there were in each bin, they are actually quite close.
-
-### [Click here to find a downloadable executable from GitHub.](https://github.com/mikeverwer/roll-dice/releases)
 
 ---
 
