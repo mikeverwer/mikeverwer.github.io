@@ -2,7 +2,7 @@
 
 For a full look at my teaching credentials, including resume, teaching philosophy, samples of work, and student feedback; see my Teaching Portfolio by clicking the link in the right sidebar.
 
-I was a professor at Mohawk College from 2019 until 2024.  The main courses I taught are Math for Computer Studies and Discrete Math & Statistics; however I also taught numerous other math courses.
+I was a professor at Mohawk College from 2019 until 2025.  The main courses I taught were Math for Computer Studies and Discrete Math & Statistics; however I also taught numerous other math courses.
 
 I am currently available for private tutoring and would love to help students enhance their understanding of mathematics and programming. With my background in mathematics, I can assist with a range of topics, from foundational concepts to more advanced subjects all throughout the the high school and college levels. Additionally, I have a strong proficiency in Python and can guide students through everything from basic programming principles to more complex projects. Feel free to reach out at [my email](mailto:mike.verwer@gmail.com?subject=Private%20Tutoring%20Inquiry) if you would like to schedule a session.
 
