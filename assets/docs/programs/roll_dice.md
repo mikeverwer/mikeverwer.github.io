@@ -16,7 +16,7 @@ As you change the number of dice or the distribution of the die, a graph display
 
 As the theorem proposes, the theoretical prediction becomes more and more *Normal* shaped as the number of dice to be rolled increases.  Even the most skewed starting die distributions become *Normal* by 30 dice per roll.
 
-Press `Roll the Bones!` to begin the simulation.  The outcome of each die is displayed as the rolls occur, and each roll is place as a block on an axis of all the possible outcomes$^{[1]}$.  This builds a dot-plot of all the rolls.  Each roll is remembered and can be displayed by selecting its block.
+Press `Roll!` to begin the simulation.  The outcome of each die is displayed as the rolls occur, and each roll is place as a block on an axis of all the possible outcomes$^{[1]}$.  This builds a dot-plot of all the rolls.  Each roll is remembered and can be displayed by selecting its block.
 
 Selecting a bar on the convolution graph, or clicking on one of the bins below the x-axis of the simulation, will highlight that column on both graphs.  This is useful to keep track of a specific outcome as the rolls occur, and compare the predicted outcomes to the actual ones.
 
