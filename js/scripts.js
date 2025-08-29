@@ -36,12 +36,12 @@ function setHeaderImage() {
 // Determine if both panels are hidden and update the 'zen-mode' button accordingly
 function updateHideButton(navBars, beforeCheck) {
     const button = document.querySelector('button');
-    let closedBraces = '{}';
+    let closedBraces = '{ }';
     let openBraces = '}{';
     let bothHidden = true; // Assume both are hidden initially
     if (beforeCheck) {
         closedBraces = '}{'
-        openBraces = '{}'
+        openBraces = '{ }'
     }
     navBars.forEach(function (navBar) {
         if (navBar.style.display !== 'none') {
@@ -69,21 +69,23 @@ function toggleNavBars(navBars, hidden) {
 
 // Hide the respective navbar if the left or right edge has been clicked
 function toggleNavBar(event) {
+    const leftNav = document.getElementById('leftNav');
+    const rightNav = document.getElementById('rightNav');
     const panelID = event.target.id;
-    const button = document.querySelector('button');
     let navBar;
     if (panelID === 'left-side') {
-        navBar = document.querySelector('nav.left');
+        navBar = leftNav;
     } else if (panelID === 'right-side') {
-        navBar = document.querySelector('nav.right');
+        navBar = rightNav;
     } else {
-        const navBars = document.querySelectorAll('nav');
+        // const navBars = document.querySelectorAll('nav');
+        const navBars = [leftNav, rightNav];
         const hidden = updateHideButton(navBars, true); // Toggle the visibility of navbars and update button text
         toggleNavBars(navBars, hidden); // Hide or show both navbars based on the button state
         return; // Exit the function since no further action is needed
     }
     if (navBar.style.display === 'none') {
-        navBar.style.display = 'flex'; // Show the navbar
+        navBar.style.display = 'block'; // Show the navbar
     } else {
         navBar.style.display = 'none'; // Hide the navbar
     }
@@ -118,20 +120,4 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleArea.addEventListener('click', toggleNavBar);
     });
     button.addEventListener('click', toggleNavBar); // Add event listener to the button
-    
-    // -------------------------------------------------------------------------------------------
-    // Configure `zero-md`.
-    // -------------------------------------------------------------------------------------------
-
 });
-
-// Configure MathJax settings; LaTeX rendering
-MathJax = {
-    tex: {
-        inlineMath: [
-            ['$', '$'], // you can change this to the delimiter of your choice
-            ['\\(', '\\)']
-        ]
-    }
-}
-addEventListener('zero-md-rendered', () => MathJax.typeset())

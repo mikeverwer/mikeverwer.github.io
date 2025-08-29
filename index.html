@@ -1,111 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="index, follow" name="robots"/>
-  <meta content="# Mike Verwer
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="# Mike Verwer
 The personal website of Mike Verwer, M. Sc. Mathematics.
 This is the homepage. 
-Explore the site to learn more about me." name="description"/>
-  <link href="/styles/main_page_styles.css" rel="stylesheet"/>
-  <link href="/assets/images/favicon.png" rel="icon" type="image/png"/>
-  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
-  <title>
-   home
-  </title>
-  <!-- zero-md module import -->
-  <script src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js" type="module">
+Explore the site to learn more about me.">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/main-styles.css">
+  <link rel="stylesheet" href="/styles/markdown-styles.css">
+  <link rel="stylesheet" href="/styles/syntax-highlighting-material.css">
+  
+  <title>home</title>
+  
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
   </script>
-  <!-- Library for older browsers to support modern features -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <!-- Import MathJax Library -->
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js">
-  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Mermaid import-->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+
   <!-- Local scripts -->
-  <script src="/scripts.js">
-  </script>
- </head>
- <body>
+  <script src="/js/scripts.js"></script>
+  <script src="/js/marked-footnote.js"></script>
+  <script type="module" src="/js/render-markdown.js"></script>
+  <script src="/js/identify-current-link.js" defer></script>
+</head>
+<body>
   <!-- "zen-mode" button (hides/shows both nav bars) -->
-  <button id="toggle-sidebars">
-   {}
-  </button>
-  <div class="container">
-   <header>
+  <button id="toggle-sidebars">{ }</button>
+
+  <header>
     <a href="https://mikeverwer.github.io/index.html">
-     <img alt="Home" id="home-button" src=""/>
+      <img id="home-button" alt="Home" src="/assets/images/website-icon-1.png">
     </a>
-    <a href="/about.html">
-     <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
-     <h1>
-      Mike Verwer
-     </h1>
-     <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
+    <a href="/about.html"> 
+      <h1>Mike Verwer</h1> 
     </a>
-   </header>
-   <div class="main-section">
-    <!-- Toggle Area -->
-    <div class="panel-toggle-area" id="left-side">
+  </header>
+
+  <!-- Mobile Navs -->
+  <nav class="horizontal-nav main-links" id="main-links">
+    <ul>
+        <li><a href="/about.html">About Me</a></li>
+        <li><a href="/teaching.html">Teaching</a></li>
+        <li><a href="/programs.html">Programs</a></li>
+        <li><a href="https://github.com/mikeverwer/" target="_blank">GitHub</a></li>
+        <li><a href="/youtube.html">Youtube</a></li>
+      </ul>
+  </nav>
+
+  <nav class="horizontal-nav side-links" id="side-links">
+    <ul>
+    </ul>
+  </nav>
+  
+  <div class="container">
+
+    <div class="main-section">
+      <!-- Toggle Area -->
+      <div class="panel-toggle-area" id="left-side"></div>
+
+      <nav class="vertical-nav main-links" id="leftNav">
+        <ul>
+          <li><a href="/about.html">About Me</a></li>
+          <li><a href="/teaching.html">Teaching</a></li>
+          <li><a href="/programs.html">Programs</a></li>
+          <li><a href="https://github.com/mikeverwer/" target="_blank">GitHub</a></li>
+          <li><a href="/youtube.html">Youtube</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <div id="markdown-content" class="markdown-body" src="/assets/docs/full-markdown-sample.md"></div>
+      </article>
+
+      <nav class="vertical-nav side-links" id="rightNav">
+        <ul>
+        </ul>
+      </nav>
+
+      <!-- Navbar Toggle Area -->
+      <div class="panel-toggle-area" id="right-side"></div>
     </div>
-    <nav class="left">
-     <ul>
-      <li>
-       <a href="/teaching.html">
-        Teaching
-       </a>
-      </li>
-      <li>
-       <a href="/programs.html">
-        Programs
-       </a>
-      </li>
-      <li>
-       <a href="https://github.com/mikeverwer/" target="_blank">
-        GitHub
-       </a>
-      </li>
-      <li>
-       <a href="/youtube.html">
-        Youtube
-       </a>
-      </li>
-     </ul>
-    </nav>
-    <article>
-     <!-- Simply set the `src` attribute to your MD file and win -->
-     <zero-md no-shadow="" src="/assets/docs/greeting.md">
-     </zero-md>
-    </article>
-    <nav class="right">
-     <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
-     <ul>
-     </ul>
-    </nav>
-    <!-- Navbar Toggle Area -->
-    <div class="panel-toggle-area" id="right-side">
+
+  </div>
+
+  <div class="vspace"></div>
+
+  <footer>
+    <div class="author">Made by Mike Verwer</div>
+    <div class="secret-container">
+      <div class="last-modified">
+        Last Modified:
+        <span class="date-modified">2025-05-10</span>
+      </div>
+      <a href="/secret.html">
+        <img class="bottom-right-image" alt="Golden rectangle" src="/assets/images/golden-rectangle.png">
+      </a>
     </div>
-   </div>
-  </div>
-  <div class="vspace">
-  </div>
-  <div class="footer">
-   <div class="author">
-    Made by Mike Verwer
-   </div>
-   <a href="/password.html">
-    <img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"/>
-   </a>
-   <div class="last-modified">
-    Last Modified:
-    <yyyy-mm-dd-hh:mm>
-     2025-05-10
-    </yyyy-mm-dd-hh:mm>
-   </div>
-  </div>
- </body>
+  </footer>
+
+</body>
 </html>
