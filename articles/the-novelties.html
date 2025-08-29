@@ -6,64 +6,80 @@
   <meta content="index, nofollow" name="robots"/>
   <meta content="The Novelties are the integers represented with a non-positional number system.  Each integer is written as a concatenation of all prime factors in its prime factorization, including multiplicity.  The twist is that the primes are represented by their index in the set of  all primes.
 The Novelties are ordered based on the length of their concatenation. Since primes are 'atomic', they are the smallest numbers. The largest numbers will always have the length of the largest power of 2 in the set." name="description"/>
-  <link href="/styles/article_page_styles.css" rel="stylesheet"/>
   <link href="/assets/images/favicon.png" rel="icon" type="image/png"/>
-  <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
+  <!-- Styles -->
+  <link href="/styles/reset.css" rel="stylesheet"/>
+  <link href="/styles/main-styles.css" rel="stylesheet"/>
+  <link href="/styles/markdown-styles.css" rel="stylesheet"/>
+  <link href="/styles/syntax-highlighting-material.css" rel="stylesheet"/>
   <title>
    The Novelties
   </title>
-  <!-- zero-md module import -->
-  <script src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js" type="module">
+  <!-- MathJax -->
+  <script>
+   window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
   </script>
-  <!-- Library for older browsers to support modern features -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <!-- Import MathJax Library -->
   <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-  <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js">
+  <!-- Mermaid import-->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js">
   </script>
   <!-- Local scripts -->
-  <script src="/scripts.js">
+  <script src="/js/scripts.js">
+  </script>
+  <script src="/js/marked-footnote.js">
+  </script>
+  <script src="/js/render-markdown.js" type="module">
+  </script>
+  <script defer="" src="/js/identify-current-link.js">
   </script>
  </head>
  <body>
   <!-- "zen-mode" button (hides/shows both nav bars) -->
   <button id="toggle-sidebars">
-   {}
+   { }
   </button>
+  <header>
+   <a href="https://mikeverwer.github.io/index.html">
+    <img alt="Home" id="home-button" src="/assets/images/website-icon-1.png"/>
+   </a>
+   <a href="/about.html">
+    <h1>
+     Mike Verwer
+    </h1>
+   </a>
+  </header>
+  <!-- Mobile Navs -->
+  <nav class="horizontal-nav main-links" id="main-links">
+   <ul>
+   </ul>
+  </nav>
+  <nav class="horizontal-nav side-links" id="side-links">
+   <ul>
+   </ul>
+  </nav>
   <div class="container">
-   <header>
-    <a href="https://mikeverwer.github.io/index.html">
-     <img alt="Home" id="home-button" src=""/>
-    </a>
-    <a href="/about.html">
-     <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
-     <h1>
-      Mike Verwer
-     </h1>
-     <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
-    </a>
-   </header>
    <div class="main-section">
     <!-- Toggle Area -->
     <div class="panel-toggle-area" id="left-side">
     </div>
-    <nav class="left">
+    <nav class="vertical-nav main-links" id="leftNav">
      <ul>
      </ul>
     </nav>
     <article>
-     <!-- Simply set the `src` attribute to your MD file and win -->
-     <zero-md no-shadow="" src="/assets/docs/articles/the-novelties.md">
-     </zero-md>
+     <div class="markdown-body" id="markdown-content" src="/assets/docs/articles/the-novelties.md">
+     </div>
      <p id="article-date">
       Written by Mike Verwer; 2024-02-18
      </p>
     </article>
-    <nav class="right">
-     <!--########## |||||||||||| UPDATE EVERY PAGE |||||||||||| ############-->
+    <nav class="vertical-nav side-links" id="rightNav">
      <ul>
      </ul>
     </nav>
@@ -74,19 +90,21 @@ The Novelties are ordered based on the length of their concatenation. Since prim
   </div>
   <div class="vspace">
   </div>
-  <div class="footer">
+  <footer>
    <div class="author">
     Made by Mike Verwer
    </div>
-   <a href="/password.html">
-    <img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"/>
-   </a>
-   <div class="last-modified">
-    Last Modified:
-    <yyyy-mm-dd-hh:mm>
-     2025-05-10
-    </yyyy-mm-dd-hh:mm>
+   <div class="secret-container">
+    <div class="last-modified">
+     Last Modified:
+     <span class="date-modified">
+      2025-08-29
+     </span>
+    </div>
+    <a href="/secret.html">
+     <img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"/>
+    </a>
    </div>
-  </div>
+  </footer>
  </body>
 </html>
