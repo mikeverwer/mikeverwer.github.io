@@ -35,7 +35,7 @@ function setHeaderImage() {
 // -------------------------------------------------------------------------------------------
 // Determine if both panels are hidden and update the 'zen-mode' button accordingly
 function updateHideButton(navBars, beforeCheck) {
-    const button = document.querySelector('button');
+    const button = document.getElementById("toggle-sidebars");
     let closedBraces = '{ }';
     let openBraces = '}{';
     let bothHidden = true; // Assume both are hidden initially
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Toggle the navbars via side-panels or button.
     // -------------------------------------------------------------------------------------------
     const panelToggleAreas = document.querySelectorAll('.panel-toggle-area');
-    const button = document.querySelector('button');
+    const button = document.getElementById("toggle-sidebars");
     panelToggleAreas.forEach(function (toggleArea) {  // Add event listener to side panels
         toggleArea.addEventListener('click', toggleNavBar);
     });
