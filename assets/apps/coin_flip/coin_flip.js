@@ -158,7 +158,7 @@ function buildPlot() {
         if (pk > maxProb) maxProb = pk;
     }
 
-    const yMaxProb = Math.min(1.0, maxProb * 1.3);
+    const yMaxProb = Math.min(1.0, maxProb * 1.5);
     const yMaxFreq = yMaxProb * trials;
 
     const probTicks = generateTicks(yMaxProb);
