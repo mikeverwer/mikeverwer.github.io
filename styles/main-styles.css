@@ -131,7 +131,7 @@ article {
     flex: 1 1 1200px;
     background-color: #eaeaea;
     padding: 40px 40px;
-    /* max-width: 1200px; */
+    max-width: 1200px;
     overflow: scroll;
 }
 
@@ -209,7 +209,7 @@ nav#rightNav {
 }
 
 nav.vertical-nav li {
-    padding: 5px 0;
+    padding: 8px 0;
 }
 
 nav.vertical-nav a {

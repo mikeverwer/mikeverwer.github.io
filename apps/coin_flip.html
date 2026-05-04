@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="noindex, nofollow" name="robots"/>
+  <meta content="Template page - MainPage" name="description"/>
+  <link href="/assets/images/favicon.png" rel="icon" type="image/png"/>
+  <!-- Styles -->
+  <link href="/styles/reset.css" rel="stylesheet"/>
+  <link href="/styles/main-styles.css" rel="stylesheet"/>
+  <link href="/styles/markdown-styles.css" rel="stylesheet"/>
+  <link href="/styles/syntax-highlighting-material.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles/app-styles.css">
+  <title>
+   Coin Flip
+  </title>
+  <!-- MathJax -->
+  <script>
+   window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <!-- Mermaid import-->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js">
+  </script>
+  <!-- Plotly import -->
+  <script src='https://cdn.plot.ly/plotly-3.5.0.min.js'></script>
+  <!-- Local scripts -->
+  <script src="/js/scripts.js">
+  </script>
+  <script src="/js/marked-footnote.js">
+  </script>
+  <script src="/js/render-markdown.js" type="module">
+  </script>
+  <script defer="" src="/js/identify-current-link.js">
+  </script>
+  <script defer src="/js/coin-flip.js"></script>
+ </head>
+ <body>
+
+  <header>
+   <a href="https://mikeverwer.github.io/index.html">
+    <img alt="Home" id="home-button" src="/assets/images/website-icon-1.png"/>
+   </a>
+  <h1>
+    Coin Flip
+  </h1>
+  </header>
+  <!-- Mobile Navs -->
+  <nav class="horizontal-nav main-links" id="main-links">
+    <ul>
+      <li><a href="/about.html">About Me</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/programs.html">Programs</a></li>
+      <li><a href="https://github.com/mikeverwer/" target="_blank">GitHub</a></li>
+      <li><a href="/youtube.html">Youtube</a></li>
+    </ul>
+  </nav>
+
+  <nav class="horizontal-nav side-links" id="side-links">
+   <ul>
+   </ul>
+  </nav>
+
+  <div class="container">
+
+   <div class="main-section">
+
+    <nav class="vertical-nav main-links" id="leftNav">
+      <ul>
+        <li><a href="/about.html">About Me</a></li>
+        <li><a href="/teaching.html">Teaching</a></li>
+        <li><a href="/programs.html">Programs</a></li>
+        <li><a href="https://github.com/mikeverwer/" target="_blank">GitHub</a></li>
+        <li><a href="/youtube.html">Youtube</a></li>
+      </ul>
+    </nav>
+
+    <div id="coin-flip-app">
+
+      <form id="flip-form">
+        <div class="form-group">
+          <label for="num-coins">Number of Coins</label>
+          <input type="number" id="num-coins" value="50" min="1">
+        </div>
+        <div class="form-group">
+          <label for="num-trials">Number of Trials</label>
+          <input type="number" id="num-trials" value="100" min="1">
+        </div>
+        <div class="form-group">
+          <label for="prob-heads">Probability of Heads: <span id="prob-display">0.50</span></label>
+          <input type="range" id="prob-heads" min="0" max="1" step="0.01" value="0.5">
+        </div>
+        <button type="button" id="run-btn">Run Simulation</button>
+      </form>
+
+      <div id="flip-plot"></div>
+
+      <article>
+        <div class="markdown-body" id="markdown-content" src="/assets/docs/programs/coin_flip.md">
+        </div>
+      </article>
+
+    </div>
+
+    <nav class="vertical-nav side-links" id="rightNav">
+     <ul>
+     </ul>
+    </nav>
+
+   </div>
+
+  </div>
+
+  <div class="vspace"></div>
+
+  <footer>
+   <div class="author">
+    Made by Mike Verwer
+   </div>
+   <div class="secret-container">
+    <div class="last-modified">
+     Last Modified:
+     <span class="date-modified">
+      2026-04-27
+     </span>
+    </div>
+    <a href="/secret.html">
+     <img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"/>
+    </a>
+   </div>
+  </footer>
+ </body>
+</html>
