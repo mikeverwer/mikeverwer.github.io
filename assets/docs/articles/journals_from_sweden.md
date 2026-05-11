@@ -1,4 +1,4 @@
-# Journals from Sweden - Getting Away From Being Pretty Much A Husk Of A Human Being
+# Journals from Sweden <br><span style="font-size: 32px; color: #444444;"> Getting Away From Being Pretty Much A Husk Of A Human Being </span>
 
 __Author's Note:__ Footnotes are intended to be read as they are encountered. Author's Notes signify things that were written after the trip and will be denoted with a *.
 
