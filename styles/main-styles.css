@@ -49,7 +49,7 @@ body {
     background-color: var(--color-bg-page);
     background-image: url("/assets/images/background.png");
     background-attachment: scroll;
-    background-repeat: repeat;
+    background-repeat: repeat-y;
     font-family: var(--font-body);
 }
 

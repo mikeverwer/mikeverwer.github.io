@@ -162,7 +162,8 @@ Term 1
 Term 2
 : This is the definition of the second term.
 
-: Another definition for the second term.
+: A Sub-Term
+    : This is the definition of the sub-term
 
 Third term with longer name
 : This is a much longer definition that might wrap across multiple lines in the output. Description lists are useful for glossaries, metadata displays, or any situation where you need to associate names with descriptions.
