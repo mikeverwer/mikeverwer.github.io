@@ -118,8 +118,8 @@ async function renderMarkdown(element) {
 
 // Render all elements with the class 'markdown-content'
 document.addEventListener('DOMContentLoaded', function() {
-    const markdownContent = document.getElementById('markdown-content');
-    if (markdownContent) {
-        renderMarkdown(markdownContent);
-    }
+    const markdownElements = document.querySelectorAll('.markdown-body');
+    markdownElements.forEach(function(element) {
+        renderMarkdown(element);
+    });
 });
