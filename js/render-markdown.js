@@ -116,7 +116,7 @@ async function renderMarkdown(element) {
 }
 
 
-// Render all elements with the class 'markdown-content'
+// Render all elements with the class 'markdown-body'
 document.addEventListener('DOMContentLoaded', function() {
     const markdownElements = document.querySelectorAll('.markdown-body');
     markdownElements.forEach(function(element) {

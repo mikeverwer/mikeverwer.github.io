@@ -175,10 +175,6 @@ nav ul {
     list-style: none;
 }
 
-nav a.current {
-    text-decoration: underline var(--color-accent) 2px;
-}
-
 /* Vertical (desktop sidebar) navigation */
 nav.vertical-nav {
     flex: 0 0 var(--nav-width);
@@ -193,23 +189,40 @@ nav.vertical-nav {
 }
 
 nav.vertical-nav li {
-    padding: 8px 0;
+    padding: 0;
 }
 
 nav.vertical-nav a {
-    padding: 10px 0;
+    display: block;
+    padding: 12px 16px;
     text-decoration: none;
     color: black;
 }
 
 nav.vertical-nav a:hover {
     cursor: cell;
-    color: white;
+    color: var(--color-accent);
+    background-color: var(--color-hover);
+}
+
+nav#leftNav {
+    margin-right: 10px;
 }
 
 nav#rightNav {
     text-align: right;
     font-size: 1.25em;
+    margin-left: 10px;
+}
+
+nav#rightNav a {
+    padding: 8px 10px 14px;
+    border-bottom: 1px solid var(--color-accent-dim);
+}
+
+nav#rightNav li:last-child a {
+    border-bottom: none;
+    padding-bottom: 8px;
 }
 
 /* Horizontal (mobile) navigation — hidden by default, shown via media query */
@@ -254,6 +267,10 @@ nav.horizontal-nav a:active {
     font-size: 0.9em;
     text-align: center;
     text-decoration: underline var(--color-accent);
+}
+
+nav a.current {
+    text-decoration: underline var(--color-accent) 2px;
 }
 
 
