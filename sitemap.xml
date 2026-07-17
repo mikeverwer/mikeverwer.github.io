@@ -12,42 +12,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://mikeverwer.github.io/youtube/youtube_home.html</loc>
-    <lastmod>2024-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://mikeverwer.github.io/teaching/teaching_home.html</loc>
-    <lastmod>2024-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mikeverwer.github.io/programs/programs_home.html</loc>
-    <lastmod>2024-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mikeverwer.github.io/assets/docs/about.html</loc>
-    <lastmod>2024-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://mikeverwer.github.io/programs/roll_dice.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mikeverwer.github.io/programs/playing_with_primes.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+ 
   <url>
     <loc>https://mikeverwer.github.io/404.html</loc>
     <lastmod>2026-07-17</lastmod>
