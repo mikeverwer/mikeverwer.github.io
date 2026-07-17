@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="index, nofollow" name="robots">
-    <meta content="Interactive coin flip simulator that visualizes the binomial distribution. Watch empirical results converge to theory as you adjust trials and probability." name="description">
+    <meta content="An interactive Tableau dashboard exploring twelve years of publicly reported cyber events, built on the University of Maryland&#x27;s Cyber Events Database." name="description">
     <link href="/assets/images/favicon.png" rel="icon" type="image/png">
     <!-- Styles -->
     <link href="/styles/reset.css" rel="stylesheet">
@@ -12,7 +12,7 @@
     <link href="/styles/markdown-styles.css" rel="stylesheet">
     <link href="/styles/syntax-highlighting-material.css" rel="stylesheet">
     <link href="/assets/apps/cyber_events/cyber_events.css" rel="stylesheet">
-    <title>Cyber Events</title>
+    <title>Cyber Events,</title>
     <!-- MathJax -->
     <script>
    window.MathJax = {
@@ -31,13 +31,14 @@
     <script src="/js/render-markdown.js" type="module"></script>
     <script defer="" src="/js/identify-current-link.js"></script>
     <script defer="" src="/js/heading-toc.js"></script>
+    <script src="/assets/apps/cyber_events/cyber_events.js"></script>
   </head>
   <body>
     <!-- "zen-mode" button (hides/shows both nav bars) -->
     <button id="toggle-sidebars" title="Toggle focus mode">{ }</button>
     <header>
       <a href="https://mikeverwer.github.io/index.html"><img alt="Home" id="home-button" src="/assets/images/website-icon-1.png"></a>
-      <h1>Cyber Events</h1>
+      <h1>Teaching</h1>
     </header>
     <!-- Mobile Navs -->
     <nav class="horizontal-nav main-links" id="main-links">
@@ -64,22 +65,11 @@
       </nav>
       <div class="main-section">
         <div id="app-container">
-
           <article>
             <div class="markdown-body" src="/assets/docs/apps/cyber_events_intro.md"></div>
           </article>
-
-          <script type="module"
-            src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
-
-          <div id="embedding-container">
-            <tableau-viz
-              id="tableauViz"
-              src="https://public.tableau.com/views/CyberEvents_17842459556440/CyberThreatLandscape2014-2025"
-              toolbar="bottom">
-            </tableau-viz>
-          </div>
-
+          <script src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js" type="module"></script>
+          <div id="embedding-container"><tableau-viz id="tableauViz" src="https://public.tableau.com/views/CyberEvents_17842459556440/CyberThreatLandscape2014-2025" toolbar="bottom"></tableau-viz></div>
         </div>
         <article>
           <div class="markdown-body" id="markdown-content" src="/assets/docs/apps/cyber_events.md"></div>
@@ -94,7 +84,7 @@
     <footer>
       <div class="author">Made by Mike Verwer</div>
       <div class="secret-container">
-        <div class="last-modified">Last Modified: <span class="date-modified">2026-07-16</span></div>
+        <div class="last-modified">Last Modified: <span class="date-modified">2026-07-17</span></div>
         <a href="/secret.html"><img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"></a>
       </div>
     </footer>
