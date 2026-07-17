@@ -58,9 +58,9 @@ Among industries, Public Administration is the most targeted sector overall, fol
 
 The dashboard describes reported events, not all events, and the reporting process is neither immediate nor uniform across countries and sectors. Attribution figures rest on source claims rather than independent verification and cover roughly a quarter of the dataset. These limits do not undermine the broad patterns, which are robust across filters, but they do mean the dashboard is a map of the publicly visible threat landscape rather than the landscape itself.
 
-## From Raw CSV to Dashboard
+## Preprocessing 
 
-The pipeline is short. The CISSM CSV snapshot goes through a pandas cleaning script, the cleaned file is loaded into Tableau as an extract with the data source filters described above applied, and the finished workbook is published to Tableau Public.
+The CISSM CSV snapshot goes through a pandas cleaning script, the cleaned file is loaded into Tableau as an extract with the data source filters described above applied, and the finished workbook is published to Tableau Public.
 
 The cleaning script exists because the raw snapshot contained several variants of the same category differing only in casing, spacing, or pluralization. `Exploitation Of Application Server`, `Exploitation of Application Servers`, and `Exploitation of application server` all describe one event subtype, but Tableau treats each text variant as its own category. Without the fixes, the map splits a single country across two marks and the subtype filters show duplicate entries for what is really one thing.
 
