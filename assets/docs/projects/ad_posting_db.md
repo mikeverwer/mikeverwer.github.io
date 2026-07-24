@@ -194,7 +194,7 @@ The views worth naming are the ones other objects depend on. `vw_ExpiredAds` com
 
 On the procedure side, the notable ones are `CheckAdFit`, which cross-joins a candidate ad against `vw_BoardSpace` to return a fit verdict per board ordered by available space, and `SearchMessagesBySenderOrRecipientName`, which is the only lookup procedure carrying an authorization rule: it takes a `SearcherID` and returns only conversations that person was party to, so the messaging search cannot be used to read other people's threads.
 
-Full listings for both layers, with signatures and returned columns, are maintained separately: [Views](views.md) and [Stored Procedures](procedures.md).
+Full listings for both layers, with signatures and returned columns, are maintained separately: [Views](\projects\ad_posting_db\ad_posting_views.html) and [Stored Procedures](\projects\ad_posting_db\ad_posting_procedures.html).
 
 ## Workflows
 
