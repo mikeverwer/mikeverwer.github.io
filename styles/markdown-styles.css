@@ -458,15 +458,15 @@ path {
   margin-right: auto;
 }
 
+
 .markdown-body code {
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding: 0.05em 0;
   margin: 0;
   font-size: 85%;
-  background-color: #314549;
+  background-color: rgba(49, 69, 73, 0.04); /* faint tint instead of solid fill */
   border-radius: 3px;
-  color: #eeffff;
+  color: #195B8B;
+  border: thin solid rgba(49, 69, 73, 0.32)
 }
 
 .markdown-body code:before,
@@ -483,6 +483,7 @@ path {
   white-space: pre;
   background: transparent;
   border: 0;
+  color: #eeffff;
 }
 
 .markdown-body .highlight {
@@ -563,6 +564,10 @@ path {
 
 .markdown-body .mermaid {
     padding-top: 1em;
+}
+
+.markdown-body .mermaid svg {
+    margin: 0 auto;
 }
 
 /* Manual mapping for each language */
