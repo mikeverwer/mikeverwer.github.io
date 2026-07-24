@@ -1,6 +1,6 @@
 # List of Stored Procedures For the College Ad Posting Database
 
-This document contains the full list of all stored procedures used in the college ad posting database described [here](mikeverwer.github.io/projects/ad_posting_db.html). The list is separated into categories based on their relevant domain area. Each procedure is listed by its name and includes a description of function and a signature that is engine-agnostic. Note that `string(n)` is used in place of datatypes like `CHAR(n)`, `VARCHAR(n)`, or `TEXT`.
+This document contains the full list of all stored procedures used in the college ad posting database described [here](https://mikeverwer.github.io/projects/ad_posting_db.html). The list is separated into categories based on their relevant domain area. Each procedure is listed by its name and includes a description of function and a signature that is engine-agnostic. Note that `string(n)` is used in place of datatypes like `CHAR(n)`, `VARCHAR(n)`, or `TEXT`.
 
 ## Person & Roles
 

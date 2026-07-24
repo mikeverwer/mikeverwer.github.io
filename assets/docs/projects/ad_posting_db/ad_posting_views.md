@@ -1,9 +1,10 @@
 # List of Views For the College Ad Posting Database
 
+This document contains the full list of all views used in the college ad posting database described [here](https://mikeverwer.github.io/projects/ad_posting_db.html). The list is separated into categories based on their relevant domain area. Some categories have no views but a category header is still included to stay consistent with the categorization used across the project.
 
 ## Person & Roles
 
-Views over people and the roles they hold. No views currently live here; all person and role logic is procedural (see [Procedures](mikeverwer.github.io/projects/ad_posting_db/ad_posting_procedures.html)).
+Views over people and the roles they hold. No views currently live here; all person and role logic is procedural (see [Procedures](https://mikeverwer.github.io/projects/ad_posting_db/ad_posting_procedures.html)).
 
 ## Ad Lifecycle & Review
 
