@@ -49,7 +49,6 @@ jobs:
             --exclude='__pycache__' \
             --exclude='*.pyc' \
             --exclude='_site_building' \
-            --exclude='site_config.json' \
             --exclude='_site' \
             --exclude='tests' \
             ./ _site/
