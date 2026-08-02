@@ -1,0 +1,69 @@
+name: Build and deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4
+
+      # --root . tells PersonalSitePage to write pages relative to the repo
+      # checkout root, exactly like it does on your machine — the JSON's
+      # saved "root"/"template" (your D:/... path) are ignored here.
+      - name: Build site with PageMaker
+        run: >
+          python _site_building/build_site.py --config _site_building/site_config.json
+          --root . --template teaching.html
+
+      # upload-pages-artifact deploys one directory verbatim with no way to
+      # exclude files, and the build above writes html straight into the
+      # checkout (mixed in with build_site.py, site_config.json, etc). So we
+      # stage a clean copy first, excluding only dev/tooling files — add to
+      # this list if you add other non-site files later.
+      - name: Stage public files
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='__pycache__' \
+            --exclude='*.pyc' \
+            --exclude='_site_building' \
+            --exclude='site_config.json' \
+            --exclude='_site' \
+            --exclude='tests' \
+            ./ _site/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
