@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="index, nofollow" name="robots">
-    <meta content="Interactive coin flip simulator that visualizes the binomial distribution. Watch empirical results converge to theory as you adjust trials and probability." name="description">
+    <meta content="A template file for the `app` page type. An app file has an app-container div taht gets injected with any HTML the app needs" name="description">
     <link href="/assets/images/favicon.png" rel="icon" type="image/png">
     <!-- Styles -->
     <link href="/styles/reset.css" rel="stylesheet">
     <link href="/styles/main-styles.css" rel="stylesheet">
     <link href="/styles/markdown-styles.css" rel="stylesheet">
     <link href="/styles/syntax-highlighting-material.css" rel="stylesheet">
-    <link href="/assets/apps/coin_flip/coin_flip.css" rel="stylesheet">
-    <title>Coin Flip</title>
+    <link href="/assets/apps/app/app.css" rel="stylesheet">
+    <title>Default App</title>
     <!-- MathJax -->
     <script>
    window.MathJax = {
@@ -31,14 +31,14 @@
     <script src="/js/render-markdown.js" type="module"></script>
     <script defer="" src="/js/identify-current-link.js"></script>
     <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
-    <script src="/assets/apps/coin_flip/coin_flip.js"></script>
+    <script src="/assets/apps/app/app.js"></script>
   </head>
   <body>
     <!-- "zen-mode" button (hides/shows both nav bars) -->
     <button id="toggle-sidebars" title="Toggle focus mode">{ }</button>
     <header>
       <a href="https://mikeverwer.github.io/index.html"><img alt="Home" id="home-button" src="/assets/images/website-icon-1.png"></a>
-      <h1>Coin Flip</h1>
+      <h1>App Template</h1>
     </header>
     <!-- Mobile Navs -->
     <nav class="horizontal-nav main-links" id="main-links">
@@ -68,9 +68,19 @@
  
           <!-- content.html gets injected here -->
 
+          <div id="golden-rectangle-app" class="gr-app">
+            <h2>Golden Rectangle</h2>
+            <div class="gr-controls">
+              <button id="gr-reset" type="button">Reset</button>
+              <span id="gr-count" class="gr-count">Subdivisions: 0</span>
+            </div>
+            <svg id="gr-svg" viewBox="0 0 600 371" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Golden rectangle subdivider"></svg>
+            <p class="gr-hint">Click the rectangle to slice off the next golden section.</p>
+          </div>
+
         </div>
         <article>
-          <div class="markdown-body" id="markdown-content" src="/assets/docs/projects/cyber-threat-dashboard.md"></div>
+          <div class="markdown-body" id="markdown-content" src="/assets/docs/apps/app.md"></div>
           <p id="article-date">Last updated: 2026-04-30</p>
         </article>
       </div>
