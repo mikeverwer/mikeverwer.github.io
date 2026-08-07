@@ -88,11 +88,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 100px;
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
 }
 
 header h1 {
-    font-size: 64px;
+    font-size: 2em;
 }
 
 header a {
@@ -106,8 +106,8 @@ header a:hover {
 }
 
 header #home-button {
-    margin: 8px;
-    height: 96px;
+    margin: 10px;
+    height: 80px;
     padding: 4px;
     border: 4px solid transparent;
     background-color: transparent;
@@ -154,7 +154,6 @@ article {
     max-width: var(--content-max);
     padding: 40px 40px;
     background-color: var(--color-bg-card);
-    overflow: scroll;
 }
 
 article a {
@@ -169,7 +168,6 @@ article a {
     text-decoration: overline;
     color: var(--color-accent-dim);
 }
-
 
 /* ====================================================================
    Navigation
@@ -275,6 +273,10 @@ nav.horizontal-nav a:active {
 
 nav a.current {
     text-decoration: underline var(--color-accent) 2px;
+}
+
+nav a.current:hover {
+    text-decoration: underline var(--color-text) 2px;
 }
 
 
@@ -471,11 +473,11 @@ img.bottom-right-image:hover {
 
     header h1 {
         padding-right: 10px;
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
 
     header #home-button {
-        height: 60px;
+        height: 48px;
         background-color: white;
     }
 

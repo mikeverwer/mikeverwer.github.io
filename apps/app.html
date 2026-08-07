@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="index, nofollow" name="robots">
-    <meta content="A template file for the `app` page type. An app file has an app-container div taht gets injected with any HTML the app needs" name="description">
+    <meta content="noindex, nofollow" name="robots">
+    <meta content="A template file for the `app` page type. An app file has an app-container div thatt gets injected with any HTML the app needs." name="description">
     <link href="/assets/images/favicon.png" rel="icon" type="image/png">
     <!-- Styles -->
     <link href="/styles/reset.css" rel="stylesheet">
@@ -12,7 +12,7 @@
     <link href="/styles/markdown-styles.css" rel="stylesheet">
     <link href="/styles/syntax-highlighting-material.css" rel="stylesheet">
     <link href="/assets/apps/app/app.css" rel="stylesheet">
-    <title>Default App</title>
+    <title>App Template</title>
     <!-- MathJax -->
     <script>
    window.MathJax = {
@@ -30,7 +30,7 @@
     <script src="/js/marked-footnote.js"></script>
     <script src="/js/render-markdown.js" type="module"></script>
     <script defer="" src="/js/identify-current-link.js"></script>
-    <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
+    <script defer="" src="/js/heading-toc.js"></script>
     <script src="/assets/apps/app/app.js"></script>
   </head>
   <body>
@@ -38,7 +38,7 @@
     <button id="toggle-sidebars" title="Toggle focus mode">{ }</button>
     <header>
       <a href="https://mikeverwer.github.io/index.html"><img alt="Home" id="home-button" src="/assets/images/website-icon-1.png"></a>
-      <h1>App Template</h1>
+      <h1>Mike Verwer</h1>
     </header>
     <!-- Mobile Navs -->
     <nav class="horizontal-nav main-links" id="main-links">
@@ -47,7 +47,7 @@
         <li><a href="/teaching.html">Teaching</a></li>
         <li><a href="/projects.html">Projects</a></li>
         <li><a href="https://github.com/mikeverwer/" target="_blank">GitHub</a></li>
-        <li><a href="/youtube.html">Youtube</a></li>
+        <li><a href="/youtube.html">YouTube</a></li>
       </ul>
     </nav>
     <nav class="horizontal-nav side-links" id="side-links">
@@ -60,28 +60,25 @@
           <li><a href="/teaching.html">Teaching</a></li>
           <li><a href="/projects.html">Projects</a></li>
           <li><a href="https://github.com/mikeverwer/" target="_blank">GitHub</a></li>
-          <li><a href="/youtube.html">Youtube</a></li>
+          <li><a href="/youtube.html">YouTube</a></li>
         </ul>
       </nav>
       <div class="main-section">
         <div id="app-container">
- 
-          <!-- content.html gets injected here -->
-
-          <div id="golden-rectangle-app" class="gr-app">
+          <!-- 
+  Any HTML that the app requires should go in this file.
+  All the content in this file will get injected into the #app-container div
+-->
+          <div class="gr-app" id="golden-rectangle-app">
             <h2>Golden Rectangle</h2>
-            <div class="gr-controls">
-              <button id="gr-reset" type="button">Reset</button>
-              <span id="gr-count" class="gr-count">Subdivisions: 0</span>
-            </div>
-            <svg id="gr-svg" viewBox="0 0 600 371" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Golden rectangle subdivider"></svg>
+            <div class="gr-controls"><button id="gr-reset" type="button">Reset</button> <span class="gr-count" id="gr-count">Subdivisions: 0</span></div>
+            <svg aria-label="Golden rectangle subdivider" id="gr-svg" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 600 371"></svg>
             <p class="gr-hint">Click the rectangle to slice off the next golden section.</p>
           </div>
-
         </div>
         <article>
           <div class="markdown-body" id="markdown-content" src="/assets/docs/apps/app.md"></div>
-          <p id="article-date">Last updated: 2026-04-30</p>
+          <p id="article-date">Last updated: 2026-08-02</p>
         </article>
       </div>
       <nav class="vertical-nav side-links" id="rightNav">
@@ -92,7 +89,7 @@
     <footer>
       <div class="author">Made by Mike Verwer</div>
       <div class="secret-container">
-        <div class="last-modified">Last Modified: <span class="date-modified">2026-07-12</span></div>
+        <div class="last-modified">Last Modified: <span class="date-modified">2026-08-07</span></div>
         <a href="/secret.html"><img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"></a>
       </div>
     </footer>
