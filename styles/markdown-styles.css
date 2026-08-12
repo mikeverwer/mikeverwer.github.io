@@ -546,7 +546,7 @@
       color: var(--color-accent);
       padding: 0 6px;
       border-radius: 2px;
-      background-color: #ddd;
+      background-color: var(--color-bg-page);
       font-weight: 600;
   }
 
@@ -578,8 +578,8 @@
   }
 
   code details summary {
-      background-color: #ddd;
-      color: #333;
+      background-color: var(--color-bg-page);
+      color: var(--color-body-text);
       padding: 2px 8px;
       margin-right: 42px;
       border-radius: 4px;
