@@ -588,9 +588,31 @@ svg.golden-rectangle:hover {
     #switch-theme {
       position: fixed;
       top:   9px;
-      right: 9px;
+      right: 8px;
       width: 32px;
       padding: 8px;
+    }
+
+    /* ====================================================================
+   Table of Contents (floating)
+   ==================================================================== */
+    /* Table of Contents */
+    #toggle-toc {
+        top: auto;
+        bottom: 40px;
+        width: 32px;
+        font-size: 1.5rem;
+        right: 8px;
+        padding: 0;
+    }
+    /* The panel */
+    #toc-panel {
+        top: auto;
+        bottom: 80px;
+        right: 14px;
+        z-index: 20;
+        max-width: 250px;
+        max-height: 60vh;
     }
 
     /* Homepage only - Tiny Ghost */
@@ -637,11 +659,6 @@ svg.golden-rectangle:hover {
 
     /* Desktop-only chrome */
     #toggle-sidebars {
-        display: none;
-    }
-
-    #toggle-toc,
-    #toc-panel {
         display: none;
     }
 }
