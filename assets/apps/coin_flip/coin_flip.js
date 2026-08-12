@@ -189,7 +189,7 @@ function buildPlot() {
         customdata: [],
         type: 'scatter',
         mode: 'markers',
-        marker: { color: '#0047ab', size: 6 },
+        marker: { color: Colors.accent, size: 6 },
         name: 'Simulated',
         hovertemplate: 'Heads: %{x}<br>Count: %{customdata}<extra></extra>'
     };
@@ -207,21 +207,25 @@ function buildPlot() {
         xaxis: {
             title: {
             text: 'Number of heads<br><span style="font-size: 0.8em; color: #888">Each dot represents '
-                + binSize + ' trial' + (binSize === 1 ? '' : 's') + '</span>'
+                + binSize + ' trial' + (binSize === 1 ? '' : 's') + '</span>',
+                font: { color: Colors.text }, 
             },
+            tickfont: { color: Colors.text },
             range: [-0.5, n + 0.5]
         },
         yaxis: {
-            title: { text: 'Probability' },
+            title: { text: 'Probability' }, font: { color: Colors.text } ,
+            tickfont: { color: Colors.text },
             range: [0, yMaxProb],
             tickmode: 'array',
             tickvals: probTicks,
             ticktext: probLabels
         },
         yaxis2: {
-            title: { text: 'Frequency' },
+            title: { text: 'Frequency' }, font: { color: Colors.text },
             side: 'right',
             overlaying: 'y',
+            tickfont: { color: Colors.text },
             range: [0.5, yMaxFreq + 0.5],
             tickmode: 'array',
             tickvals: freqTicks,
@@ -234,7 +238,7 @@ function buildPlot() {
             yref: 'y',
             x0: ev, x1: ev,
             y0: 0,  y1: yMaxProb,
-            line: { color: '#666', width: 1, dash: 'dash' }
+            line: { color: Colors.bodyText, width: 1, dash: 'dash' }
         }],
         annotations: [
             {
@@ -246,13 +250,14 @@ function buildPlot() {
                 yanchor: 'top',
                 xshift: evIsLeftHalf ? 4 : -4,
                 showarrow: false,
-                font: { size: 11, color: '#666' }
+                font: { size: 11, color: Colors.bodyText }
             }
         ],
         showlegend: true,
         margin: { t: 20, r: 60, b: 70 },
-        paper_bgcolor: '#eaeaea',
-        plot_bgcolor: '#eaeaea'
+        paper_bgcolor: Colors.bgCard,
+        plot_bgcolor: Colors.bgCard,
+        font: { color: Colors.text},
     };
 
     Plotly.react(
@@ -331,10 +336,14 @@ function runSimulation() {
 
 // ── Event wiring ─────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
+
+    console.log('color check:', JSON.stringify(Colors.text));
     document.getElementById('prob-heads').addEventListener('input', () => {
         const p = parseFloat(document.getElementById('prob-heads').value);
         document.getElementById('prob-display').textContent = p.toFixed(2);
-        buildPlot();
+        requestAnimationFrame(() => {
+            buildPlot();
+        });
     });
     document.getElementById('num-coins').addEventListener('input', buildPlot);
     document.getElementById('num-trials').addEventListener('input', buildPlot);
@@ -350,5 +359,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     plotResizeObserver.observe(document.getElementById('flip-plot'));
 
-    buildPlot();
+    requestAnimationFrame(() => {
+        buildPlot();
+    });
+});
+
+document.addEventListener('theme-changed', () => {
+    Plotly.relayout('flip-plot', {
+        paper_bgcolor: Colors.bgCard,
+        plot_bgcolor: Colors.bgCard,
+        'font.color': Colors.text,
+        'xaxis.tickfont.color': Colors.text,
+        'xaxis.title.font.color': Colors.text,
+        'yaxis.tickfont.color': Colors.text,
+        'yaxis.title.font.color': Colors.text,
+        'yaxis2.tickfont.color': Colors.text,
+        'yaxis2.title.font.color': Colors.text,
+        'legend.font.color': Colors.text,
+        'shapes[0].line.color': Colors.bodyText,
+        'annotations[0].font.color': Colors.bodyText
+    });
+    Plotly.restyle('flip-plot', { 'marker.color': Colors.accent }, [1]);
 });

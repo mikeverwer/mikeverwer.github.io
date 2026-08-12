@@ -11,9 +11,9 @@
     // marching-cubes implementation isn't identical, so this is a starting
     // point, not a proven-good value — tune for smoothness vs. perf once
     // this is actually running in a browser.
-    const GRID_N = 60;
-    const RANGE = 1.5;
-    const PLOT_BG = '#eaeaea'; // keep in sync with heart_surface.css 
+    const GRID_N = 50;
+    const RANGE = 1.25;
+    const PLOT_BG = Colors.bgCard;
 
     function heartSurfaceValue(x, y, z) {
         const a = 2 * x * x + y * y + z * z - 1;
@@ -112,6 +112,21 @@
         resizeObserver.observe(container);
     }
 
+    function applyTheme() {
+        if (!plotted) return;
+
+        const t0 = performance.now();
+        Plotly.relayout('heart-surface-plot', {
+            paper_bgcolor: Colors.bgCard,
+            'scene.bgcolor': Colors.bgCard,
+            'font.color': Colors.text
+        }).then(() => {
+            console.log('heart-surface relayout:', (performance.now() - t0).toFixed(1), 'ms');
+        });
+    }
+
+    document.addEventListener('theme-changed', applyTheme);
+
     document.addEventListener('DOMContentLoaded', () => {
         const app = document.getElementById('heart-surface-app');
         const toggle = document.getElementById('heart-surface-toggle');
@@ -162,4 +177,5 @@
         }
 
     });
-})();
+})
+();

@@ -3,14 +3,18 @@
    ==================================================================== */
 
 :root {
-    /* Colors */
-    --color-bg-page:    #dcdcdc;
-    --color-bg-card:    #eaeaea;
-    --color-text:       #1b1b1b;
-    --color-accent:     #0047ab;
-    --color-accent-dim: #0047ab69;
-    --color-hover:      #ffffff55;
-    --color-shadow:     #333333aa;
+    /* Colors - Light Mode */
+    --color-bg-page:          #dcdcdc;
+    --color-bg-card:          #eaeaea;
+    --color-text:             #1b1b1b;
+    --color-body-text:        #333333;
+    --color-accent:           #0047ab;          /* Cobalt Blue */
+    --color-accent-dim:       #0047ab69;
+    --color-hover:            #ffffff55;
+    --color-shadow:           #333333aa;
+    --color-inline-code-text: #195B8B;
+    --color-inline-code-bg:   #3145490a;
+    --color-form-entry:       #f8f8f8;
 
     /* Fonts */
     --font-body:    'Rubik', Helvetica, Arial, sans-serif;
@@ -22,7 +26,76 @@
     --nav-width:       150px;
     --content-max:     1200px;
     --content-zen-max: 900px;
+
+    /* Background Image */
+    --bg-texture: url("/assets/images/background-light.png");
 }
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]):not([data-theme="dark"]) {
+        --color-bg-page:          #252525;
+        --color-bg-card:          #1f1f1f;
+        --color-text:             #e4e4e4;
+        --color-body-text:        #cccccc;
+        --color-accent:           #3399FF;      /* Brilliant Azure */
+        --color-accent-dim:       #3399FF96;
+        --color-hover:            #ffffff0D;
+        --color-shadow:           #cccccc55;
+        --color-inline-code-text: #8BB9E7;
+        --color-inline-code-bg:   #3145493d;
+        --color-form-entry:       #070707;
+        --bg-texture: url("/assets/images/background-dark.png");
+    }
+}
+
+:root[data-theme="dark"] {
+    --color-bg-page:          #252525;
+    --color-bg-card:          #1f1f1f;
+    --color-text:             #e4e4e4;
+    --color-body-text:        #cccccc;
+    --color-accent:           #3399FF;          /* Brilliant Azure */
+    --color-accent-dim:       #3399FF96;
+    --color-hover:            #ffffff0D;
+    --color-shadow:           #cccccc55;
+    --color-inline-code-text: #8BB9E7;
+    --color-inline-code-bg:   #3145493d;
+    --color-form-entry:       #070707; 
+    --bg-texture: url("/assets/images/background-dark.png");
+}
+
+/* ====================================================================
+   Theme transition
+   ==================================================================== */
+
+  body,
+  header,
+  header h1,
+  header a,
+  header #home-button,
+  article,
+  article a,
+  #article-date,
+  nav.vertical-nav,
+  nav.vertical-nav a,
+  nav#rightNav a,
+  nav.horizontal-nav a,
+  nav.horizontal-nav a:active,
+  #side-links li,
+  nav a.current,
+  #toggle-sidebars,
+  #toggle-toc,
+  #toc-panel,
+  #toc-panel a,
+  footer,
+  .author,
+  #main-links,
+  kbd {
+      transition: background-color 0.3s ease,
+                  color 0.3s ease,
+                  border-color 0.3s ease,
+                  box-shadow 0.3s ease;
+}
+
 
 
 /* ====================================================================
@@ -51,7 +124,7 @@ body {
     flex-flow: column nowrap;
     min-height: 100vh;
     background-color: var(--color-bg-page);
-    background-image: url("/assets/images/background.png");
+    background-image: var(--bg-texture);
     background-attachment: scroll;
     background-repeat: repeat-y;
     font-family: var(--font-body);
@@ -77,7 +150,37 @@ kbd {
     box-shadow: inset 0 -1px 0 #bbb;
 }
 
+/* Switch Theme */
+#switch-theme {
+  position: fixed;
+  top: 20px;
+  right: 14px;
+  width: 62px;
+  padding: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+#switch-theme:hover {
+  background-color: var(--color-hover);
+}
+.theme-toggle-icon {
+  color: var(--color-text);
+  transition: transform 0.5s ease, color 0.3s ease;
+}
+.theme-toggle-icon.rotated {
+    transform: rotate(360deg);
+}
 
+/* Homepage only - Tiny Ghost */
+.ghost-image {
+    display: inline-flex;
+    height: 70px;
+    margin-left: 20px;
+    margin-block: -30px;
+    vertical-align: top;
+    color: var(--color-text);
+}
 /* ====================================================================
    Header
    ==================================================================== */
@@ -93,32 +196,28 @@ header {
 
 header h1 {
     font-size: 2em;
+    color: var(--color-text);
 }
 
-header a {
-    color: black;
+/* header a {
+    color: var(--color-text);
     text-decoration: none;
-}
+} */
 
-header a:hover {
-    cursor: cell;
-    color: white;
-}
-
-header #home-button {
-    margin: 10px;
+.glider-icon {
+    color: var(--color-accent);
+    width:  80px;   /* match your current #home-button sizing */
     height: 80px;
+    margin: 10px;
     padding: 4px;
-    border: 4px solid transparent;
+    border:  4px solid transparent;
     background-color: transparent;
 }
-
-header #home-button:hover {
+.glider-icon:hover {
     cursor: none;
-    border: 4px solid white;
-    background-color: white;
+    border: 4px solid var(--color-form-entry);
+    background-color: var(--color-form-entry);
 }
-
 
 /* ====================================================================
    Layout
@@ -129,6 +228,7 @@ header #home-button:hover {
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 10px 100px;
+    align-items: flex-start;
 }
 
 .main-section {
@@ -198,7 +298,7 @@ nav.vertical-nav a {
     display: block;
     padding: 12px 16px;
     text-decoration: none;
-    color: black;
+    color: var(--color-text);
 }
 
 nav.vertical-nav a:hover {
@@ -244,7 +344,7 @@ nav.horizontal-nav a {
     width: 100%;
     padding: 2px 4px;
     text-decoration: none;
-    color: black;
+    color: var(--color-text);
     font-weight: bold;
 }
 
@@ -294,6 +394,7 @@ nav a.current:hover {
     border: none;
     cursor: pointer;
     font-family: var(--font-display);
+    color: var(--color-text);
     font-size: 2rem;
     transition: transform 0.3s ease;
 }
@@ -336,11 +437,12 @@ nav.vertical-nav.hiding#rightNav {
 /* Toggle button — mirrors #toggle-sidebars, sits just below it */
 #toggle-toc {
     position: fixed;
-    top: 160px;
+    top: 164px;
     right: 14px;
     width: 62px;
     padding: 8px 10px 12px 10px;
     background: transparent;
+    color: var(--color-text);
     border: none;
     cursor: pointer;
     font-family: var(--font-display);
@@ -388,7 +490,7 @@ nav.vertical-nav.hiding#rightNav {
 
 #toc-panel a {
     text-decoration: none;
-    color: black;
+    color: var(--color-text);
     font-weight: bold;
 }
 
@@ -444,18 +546,17 @@ footer {
     text-decoration: underline;
 }
 
-img.bottom-right-image {
-    box-sizing: content-box;
-    height: 20px;
-    margin: 4px 4px 4px 10px;
-    padding: 4px 6px;
+svg.golden-rectangle {
+  box-sizing: content-box;
+  height: 20px;
+  margin: 4px 0px 4px 10px;
+  padding: 4px 6px;
+  color: var(--color-text);
 }
-
-img.bottom-right-image:hover {
+svg.golden-rectangle:hover {
     cursor: none;
-    background-color: white;
+    background-color: var(--color-form-entry);
 }
-
 
 /* ====================================================================
    Mobile (≤810px)
@@ -472,13 +573,31 @@ img.bottom-right-image:hover {
     }
 
     header h1 {
-        padding-right: 10px;
+        padding-right: 45px;
         font-size: 1.5em;
     }
 
-    header #home-button {
+    .glider-icon {
         height: 48px;
-        background-color: white;
+        width:  48px;
+        margin: 0px;
+        margin-left: 5px;
+    }
+
+    /* Switch Theme */
+    #switch-theme {
+      position: fixed;
+      top:   9px;
+      right: 9px;
+      width: 32px;
+      padding: 8px;
+    }
+
+    /* Homepage only - Tiny Ghost */
+    .ghost-image {
+        height: 40px;
+        margin-left: 5px;
+        margin-block: -7px;
     }
 
     .container {
@@ -500,6 +619,20 @@ img.bottom-right-image:hover {
 
     nav.horizontal-nav {
         display: block;
+    }
+    nav.horizontal-nav ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 0px 24px;
+        width: 100%;
+    }
+    #side-links ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 8px 20px;
+        padding-top: 5px;
     }
 
     /* Desktop-only chrome */

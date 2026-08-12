@@ -17,14 +17,14 @@
     flex-flow: row wrap;
     align-items: center;
     gap: 12px 24px;
-    background-color: #eaeaea;
+    background-color: var(--color-bg-card);
     padding: 20px 24px;
 }
 
 #flip-form label {
     font-size: 0.9em;
     font-weight: bold;
-    color: #1b1b1b;
+    color: var(--color-text);
     white-space: nowrap;
 }
 
@@ -34,13 +34,13 @@
     font-family: 'Rubik', Helvetica, Arial, sans-serif;
     font-size: 0.9em;
     border: 1px solid #bbb;
-    background-color: #f8f8f8;
-    color: #1b1b1b;
+    background-color: var(--color-form-entry);
+    color: var(--color-text);
     outline: none;
 }
 
 #flip-form input[type="number"]:focus {
-    border-color: #0047ab;
+    border-color: var(--color-accent);
 }
 
 /* Group each label+input pair */
@@ -53,21 +53,21 @@
 
 #flip-form input[type="range"] {
     width: 160px;
-    accent-color: #0047ab;
+    accent-color: var(--color-accent);
     cursor: pointer;
 }
 
 #prob-display {
     font-weight: normal;
-    color: #0047ab;
+    color: var(--color-accent);
     font-variant-numeric: tabular-nums;
 }
 
 #run-btn {
     margin-left: auto;
     padding: 8px 24px;
-    background-color: #1b1b1b;
-    color: #dcdcdc;
+    background-color: var(--color-text);
+    color: var(--color-bg-page);
     border: none;
     font-family: 'Rubik', Helvetica, Arial, sans-serif;
     font-size: 0.9em;
@@ -78,7 +78,7 @@
 }
 
 #run-btn:hover {
-    background-color: #0047ab;
+    background-color: var(--color-accent);
     color: white;
 }
 

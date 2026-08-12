@@ -76,13 +76,11 @@
 }
  
 .heart-surface-eq {
-    display: inline-block;
-    font-size: 1.15em;
-}
-
-
-.heart-surface-eq {
-    display: inline-block;
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
     font-size: 1.15em;
 }
 
@@ -108,7 +106,7 @@
     border: none;
     border-radius: 50%;
     background: rgba(55, 55, 55, 0.92);
-    color: #eeffff;
+    color: var(--color-bg-card);
     font-size: 20px;
     line-height: 1;
     cursor: pointer;
@@ -151,5 +149,11 @@
 
     .heart-surface-plot {
         min-height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heart-surface-eq {
+        font-size: 0.85em;
     }
 }

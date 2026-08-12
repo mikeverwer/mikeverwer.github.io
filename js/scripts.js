@@ -1,7 +1,3 @@
-// Set the initial image index to a random frame
-var currentImageIndex = getRandomInt(1, 4);
-var intervalId;
-
 // ███████ ██    ██ ███    ██  ██████ ████████ ██  ██████  ███    ██ ███████ 
 // ██      ██    ██ ████   ██ ██         ██    ██ ██    ██ ████   ██ ██      
 // █████   ██    ██ ██ ██  ██ ██         ██    ██ ██    ██ ██ ██  ██ ███████ 
@@ -12,17 +8,38 @@ var intervalId;
 // Animates the `home` icon and sets it to a random frame on page load.
 // -------------------------------------------------------------------------------------------
 
+// Set the initial frame to a random glider step
+var currentImageIndex = getRandomInt(1, 4);
+var animationFrameId = null;
+var lastFrameTime = 0;
+const FRAME_DURATION = 400; // ms between glider steps
+
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function setHeaderImage() {
-    var imagePath = "/assets/images/website-icon-" + currentImageIndex + ".png";
-    document.getElementById("home-button").src = imagePath;
+    document.getElementById("home-button-use")
+        .setAttribute('href', `/assets/images/icons-sprite.svg#glider-${currentImageIndex}`);
 
     currentImageIndex++;
     if (currentImageIndex > 4) {
         currentImageIndex = 1;
+    }
+}
+
+function animateGlider(timestamp) {
+    if (timestamp - lastFrameTime >= FRAME_DURATION) {
+        setHeaderImage();
+        lastFrameTime = timestamp;
+    }
+    animationFrameId = requestAnimationFrame(animateGlider);
+}
+
+function stopGliderAnimation() {
+    if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
     }
 }
 
@@ -58,18 +75,16 @@ function toggleSidebars() {
 // ██████   ██████  ██      ██     ███████  ██████  ██   ██ ██████  ███████ ██████
 
 document.addEventListener('DOMContentLoaded', function () {
-    // -------------------------------------------------------------------------------------------
-    // Set the home button icon and animate the glider on hover.
-    // -------------------------------------------------------------------------------------------
+
     setHeaderImage();  // initial frame
 
-    const homeButton = document.getElementById("home-button");
-    homeButton.addEventListener("mouseover", function () {
-        intervalId = setInterval(setHeaderImage, 400);
+    const homeButton = document.getElementById("home-button-icon");
+    homeButton.addEventListener("mouseenter", function () {
+        lastFrameTime = 0; // ensures the first frame swap fires immediately, not after a stale delay
+        animationFrameId = requestAnimationFrame(animateGlider);
     });
-    homeButton.addEventListener("mouseout", function () {
-        clearInterval(intervalId);
-    });
+    homeButton.addEventListener("mouseleave", stopGliderAnimation);
+
 
     // -------------------------------------------------------------------------------------------
     // Wire up the { } sidebar toggle button.

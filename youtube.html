@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="" lang="en">
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -11,7 +11,20 @@
     <link href="/styles/main-styles.css" rel="stylesheet">
     <link href="/styles/markdown-styles.css" rel="stylesheet">
     <link href="/styles/syntax-highlighting-material.css" rel="stylesheet">
+    <link href="/assets/apps/heart_surface/heart_surface.css" rel="stylesheet">
+    <link href="/assets/apps/heart_surface/heart_surface.css" rel="stylesheet">
+    <link href="/assets/apps/heart_surface/heart_surface.css" rel="stylesheet">
+    <link href="/assets/apps/heart_surface/heart_surface.css" rel="stylesheet">
     <title>YouTube</title>
+    <!-- Detect OS theme -->
+    <script>
+   (function () {
+          const saved = localStorage.getItem('theme'); // 'light' | 'dark' | null
+          if (saved) {
+              document.documentElement.setAttribute('data-theme', saved);
+          }
+      })();
+    </script>
     <!-- MathJax -->
     <script>
    window.MathJax = {
@@ -25,17 +38,29 @@
     <!-- Mermaid import-->
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
     <!-- Local scripts -->
+    <script src="/js/globals.js"></script>
+    <script defer="" src="/js/change-theme.js"></script>
     <script src="/js/scripts.js"></script>
     <script src="/js/marked-footnote.js"></script>
     <script src="/js/render-markdown.js" type="module"></script>
     <script defer="" src="/js/identify-current-link.js"></script>
     <script defer="" src="/js/heading-toc.js"></script>
+    <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
+    <script src="/assets/apps/heart_surface/heart_surface.js"></script>
+    <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
+    <script src="/assets/apps/heart_surface/heart_surface.js"></script>
+    <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
+    <script src="/assets/apps/heart_surface/heart_surface.js"></script>
+    <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
+    <script src="/assets/apps/heart_surface/heart_surface.js"></script>
   </head>
   <body>
+    <!-- Theme toggle -->
+    <button id="switch-theme"><svg class="theme-toggle-icon" viewbox="0 0 122.0 121.89"><use href="/assets/images/icons-sprite.svg#theme-toggle"></use></svg></button>
     <!-- "zen-mode" button (hides/shows both nav bars) -->
     <button id="toggle-sidebars" title="Toggle focus mode">{ }</button>
     <header>
-      <a href="https://mikeverwer.github.io/index.html"><img alt="Home" id="home-button" src="/assets/images/website-icon-1.png"></a>
+      <a href="https://mikeverwer.github.io/index.html" id="home-button"><svg class="glider-icon" id="home-button-icon"><use href="/assets/images/icons-sprite.svg#glider-1" id="home-button-use"></use></svg></a>
       <h1>Mike Verwer</h1>
     </header>
     <!-- Mobile Navs -->
@@ -75,8 +100,8 @@
     <footer>
       <div class="author">Made by Mike Verwer</div>
       <div class="secret-container">
-        <div class="last-modified">Last Modified: <span class="date-modified">2026-08-07</span></div>
-        <a href="/secret.html"><img alt="Golden rectangle" class="bottom-right-image" src="/assets/images/golden-rectangle.png"></a>
+        <div class="last-modified">Last Modified: <span class="date-modified">2026-08-12</span></div>
+        <a href="/secret.html"><svg class="golden-rectangle" viewbox="0 0 19.89 33.30"><use href="/assets/images/icons-sprite.svg#golden-rectangle"></use></svg></a>
       </div>
     </footer>
   </body>

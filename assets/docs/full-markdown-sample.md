@@ -339,6 +339,8 @@ Duplicated footnote reference[^second].
 
 ## Code and Syntax Highlighting
 
+<kbd>Ctrl</kbd>
+
 ```
 Inline `code` has `back-ticks around` it.
 ```
