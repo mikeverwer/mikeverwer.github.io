@@ -11,19 +11,15 @@
     <link href="/styles/main-styles.css" rel="stylesheet">
     <link href="/styles/markdown-styles.css" rel="stylesheet">
     <link href="/styles/syntax-highlighting-material.css" rel="stylesheet">
-    <link href="/assets/apps/heart_surface/heart_surface.css" rel="stylesheet">
-    <link href="/assets/apps/heart_surface/heart_surface.css" rel="stylesheet">
-    <link href="/assets/apps/heart_surface/heart_surface.css" rel="stylesheet">
-    <link href="/assets/apps/heart_surface/heart_surface.css" rel="stylesheet">
-    <link href="/assets/apps/coin_flip/coin_flip.css" rel="stylesheet">
-    <title>Coin Flip</title>
+    <link class="app-styles" href="/assets/apps/coin_flip/coin_flip.css" rel="stylesheet">
+    <title>Coin Flip Simulator – Binomial Distribution Visualized</title>
     <!-- Detect OS theme -->
     <script>
    (function () {
-          const saved = localStorage.getItem('theme'); // 'light' | 'dark' | null
-          if (saved) {
-              document.documentElement.setAttribute('data-theme', saved);
-          }
+        const saved = localStorage.getItem('theme'); // 'light' | 'dark' | null
+        if (saved) {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
       })();
     </script>
     <!-- MathJax -->
@@ -46,16 +42,8 @@
     <script src="/js/render-markdown.js" type="module"></script>
     <script defer="" src="/js/identify-current-link.js"></script>
     <script defer="" src="/js/heading-toc.js"></script>
-    <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
-    <script src="/assets/apps/heart_surface/heart_surface.js"></script>
-    <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
-    <script src="/assets/apps/heart_surface/heart_surface.js"></script>
-    <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
-    <script src="/assets/apps/heart_surface/heart_surface.js"></script>
-    <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
-    <script src="/assets/apps/heart_surface/heart_surface.js"></script>
-    <script src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
-    <script src="/assets/apps/coin_flip/coin_flip.js"></script>
+    <script class="app-script" src="https://cdn.plot.ly/plotly-3.5.0.min.js"></script>
+    <script class="app-script" src="/assets/apps/coin_flip/coin_flip.js"></script>
   </head>
   <body>
     <!-- Theme toggle -->
@@ -112,7 +100,7 @@
     <footer>
       <div class="author">Made by Mike Verwer</div>
       <div class="secret-container">
-        <div class="last-modified">Last Modified: <span class="date-modified">2026-08-12</span></div>
+        <div class="last-modified">Last Modified: <span class="date-modified">2026-08-21</span></div>
         <a href="/secret.html"><svg class="golden-rectangle" viewbox="0 0 19.89 33.30"><use href="/assets/images/icons-sprite.svg#golden-rectangle"></use></svg></a>
       </div>
     </footer>
