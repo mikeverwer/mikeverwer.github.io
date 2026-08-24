@@ -73,6 +73,12 @@ async function renderMarkdown(element) {
         md.use(footnotePlugin); // Use footnotes plugin
         md.use(deflistPlugin);
 
+        // Wrap tables in a container div
+        md.renderer.rules.table_open = (tokens, idx, options, env, self) =>
+            '<div class="table-wrapper">' + self.renderToken(tokens, idx, options);
+        md.renderer.rules.table_close = (tokens, idx, options, env, self) =>
+            self.renderToken(tokens, idx, options) + '</div>';
+
         const src = element.getAttribute('src');
         const response = await fetch(src);
         const markdownText = await response.text();

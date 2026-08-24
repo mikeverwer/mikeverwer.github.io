@@ -53,6 +53,7 @@ function toggleSidebars() {
     const navBars = [
         document.getElementById('leftNav'),
         document.getElementById('rightNav'),
+        document.getElementById('side-links'),
     ];
 
     const currentlyHidden = navBars[0].classList.contains('hiding');

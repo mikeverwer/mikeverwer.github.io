@@ -40,6 +40,7 @@
         // Toggle button — mirrors #toggle-sidebars styling via shared class.
         const toggle = document.createElement('button');
         toggle.id = 'toggle-toc';
+        toggle.classList.add('fixed-icon-btn', 'fixed-icon-btn-text');
         toggle.title = 'Table of contents';
         toggle.setAttribute('aria-expanded', 'false');
         toggle.textContent = '§';
