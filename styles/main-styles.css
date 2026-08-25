@@ -24,9 +24,10 @@
     --font-markdown: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
     /* Layout */
-    --nav-width:       150px;
-    --content-max:     1200px;
-    --content-zen-max: 900px;
+    --nav-width:            150px;
+    --content-max:          1200px;
+    --content-zen-max:      900px;
+    --zen-collapse-duration: 0.5s;  /* read by zen-mode.js so JS/CSS timing can't drift apart */
 
     /* Background Image */
     --bg-texture: url("/assets/images/background-light.png");
@@ -226,7 +227,12 @@ header h1 {
     min-width: 0;
     max-width: 100vw;
     padding: 10px;
-    transition: max-width 0.3s ease;
+    /* No transition here on purpose. main-section's rendered width is emergent (flex:1,
+       clipped by max-width), so transitioning max-width here at the same time nav's
+       flex-basis transitions caused the two to arrive at the target non-monotonically —
+       a visible overshoot-then-settle bounce. zen-mode.js now measures the true first/last
+       width itself and drives a single explicit `width` transition instead. See Zen Mode
+       section below. */
 }
 
 
@@ -280,7 +286,7 @@ nav.vertical-nav {
     overflow: hidden;
     transition: opacity   0.25s ease,
                 transform 0.25s ease,
-                flex-basis 0.3s ease;
+                flex-basis var(--zen-collapse-duration) ease;
 }
 
 nav.vertical-nav li {
@@ -592,10 +598,14 @@ svg.golden-rectangle:hover {
     #side-links {
         display: block;
         padding: 0 clamp(70px, 5vw, 100px);
-        max-height: 120px; /* real content height is 41px */
         overflow: hidden;
         opacity: 1;
-        transition: max-height 0.3s ease, opacity 0.25s ease;
+        /* No height/max-height here on purpose. zen-mode.js reads the real content height
+           (scrollHeight, which ignores this box's own clipping) at toggle time and drives
+           the collapse itself, so there's no guessed pixel value to go stale as links are
+           added/removed. This opacity transition is the resting/no-JS state; JS overrides
+           it with a combined height+opacity transition for the duration of the toggle. */
+        transition: opacity 0.25s ease;
     }
 
     #side-links ul {
@@ -609,10 +619,15 @@ svg.golden-rectangle:hover {
         font-size: 1em;
     }
 
-    /* max-height, not display: display:none can't be transitioned, and
-       transform doesn't reclaim layout space — max-height genuinely
-       shrinks the box so .container moves up to fill it, the same way
-       flex-basis:0 does for #leftNav/#rightNav above. */
+    /* max-height (not display or transform) is what genuinely shrinks the box so
+       .container moves up to fill the space, the same way flex-basis:0 does for
+       #leftNav/#rightNav above. This max-height:0 is a static invariant, not a guess -
+       unlike an "open" height, 0 is always correct, so it holds true purely from CSS the
+       moment .hiding is present, e.g. if zen mode was entered at desktop width (where
+       #side-links is display:none, so zen-mode.js never got a chance to run its own
+       animation on it) and the viewport is then resized into this breakpoint. zen-mode.js
+       overrides this inline with the real open-state target (scrollHeight) and animates
+       the path; this rule is just the resting/fallback truth. */
     #side-links.hiding {
         max-height: 0;
         opacity: 0;
