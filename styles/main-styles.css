@@ -8,7 +8,7 @@
     --color-bg-card:          #eaeaea;
     --color-text:             #1b1b1b;
     --color-body-text:        #333333;
-    --color-quote-text:       #555555;
+    --color-quote-text:       #666666;
     --color-accent:           #0047ab;          /* Cobalt Blue */
     --color-accent-dim:       #0047ab69;
     --color-hover:            #ffffff55;
@@ -40,7 +40,7 @@
         --color-bg-card:          #1f1f1f;
         --color-text:             #e4e4e4;
         --color-body-text:        #cccccc;
-        --color-quote-text:       #aaaaaa;
+        --color-quote-text:       #888888;
         --color-accent:           #3399ff;      /* Brilliant Azure */
         --color-accent-dim:       #3399ff96;
         --color-hover:            #ffffff0d;
@@ -57,7 +57,7 @@
     --color-bg-card:          #1f1f1f;
     --color-text:             #e4e4e4;
     --color-body-text:        #cccccc;
-    --color-quote-text:       #aaaaaa;
+    --color-quote-text:       #888888;
     --color-accent:           #3399ff;          /* Brilliant Azure */
     --color-accent-dim:       #3399ff96;
     --color-hover:            #ffffff0d;
